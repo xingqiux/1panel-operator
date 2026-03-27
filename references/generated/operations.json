@@ -1,0 +1,5048 @@
+[
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/containers/limit",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.ResourceLimit",
+    "summary": "Load container limits",
+    "tags": [
+      "(untagged)"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/containers/list/stats",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.ContainerListStats",
+    "summary": "Load container stats",
+    "tags": [
+      "(untagged)"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OllamaBindDomain",
+    "method": "POST",
+    "path": "/ai/domain/bind",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Bind domain",
+    "tags": [
+      "AI"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OllamaBindDomainReq",
+    "method": "POST",
+    "path": "/ai/domain/get",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.OllamaBindDomainRes",
+    "summary": "Get bind domain",
+    "tags": [
+      "AI"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/ai/gpu/load",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load gpu / xpu info",
+    "tags": [
+      "AI"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OllamaModelName",
+    "method": "POST",
+    "path": "/ai/ollama/model",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create Ollama model",
+    "tags": [
+      "AI"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OllamaModelName",
+    "method": "POST",
+    "path": "/ai/ollama/model/close",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Close Ollama model conn",
+    "tags": [
+      "AI"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ForceDelete",
+    "method": "POST",
+    "path": "/ai/ollama/model/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete Ollama model",
+    "tags": [
+      "AI"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OllamaModelName",
+    "method": "POST",
+    "path": "/ai/ollama/model/load",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Page Ollama models",
+    "tags": [
+      "AI"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OllamaModelName",
+    "method": "POST",
+    "path": "/ai/ollama/model/recreate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Rereate Ollama model",
+    "tags": [
+      "AI"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchWithPage",
+    "method": "POST",
+    "path": "/ai/ollama/model/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page Ollama models",
+    "tags": [
+      "AI"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/ai/ollama/model/sync",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.OllamaModelDropList",
+    "summary": "Sync Ollama model list",
+    "tags": [
+      "AI"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/apps/checkupdate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.AppUpdateRes",
+    "summary": "Get app list update",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/apps/detail/{appId}/{version}/{type}",
+    "path_params": [
+      "appId",
+      "version",
+      "type"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.AppDetailDTO",
+    "summary": "Search app detail by appid",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/apps/details/{id}",
+    "path_params": [
+      "id"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.AppDetailDTO",
+    "summary": "Get app detail by id",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/apps/ignored",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.IgnoredApp",
+    "summary": "Get Ignore App",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.AppInstallCreate",
+    "method": "POST",
+    "path": "/apps/install",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/model.AppInstall",
+    "summary": "Install app",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.AppInstalledInfo",
+    "method": "POST",
+    "path": "/apps/installed/check",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.AppInstalledCheck",
+    "summary": "Check app installed",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithNameAndType",
+    "method": "POST",
+    "path": "/apps/installed/conf",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Search default config by key",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithNameAndType",
+    "method": "GET",
+    "path": "/apps/installed/conninfo/{key}",
+    "path_params": [
+      "key"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.DatabaseConn",
+    "summary": "Search app password by key",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/apps/installed/delete/check/{appInstallId}",
+    "path_params": [
+      "appInstallId"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.AppResource",
+    "summary": "Check before delete",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.AppInstalledIgnoreUpgrade",
+    "method": "POST",
+    "path": "/apps/installed/ignore",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "ignore App Update",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/apps/installed/list",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.AppInstallInfo",
+    "summary": "List app installed",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithNameAndType",
+    "method": "POST",
+    "path": "/apps/installed/loadport",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Search app port by key",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.AppInstalledOperate",
+    "method": "POST",
+    "path": "/apps/installed/op",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Operate installed app",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.AppInstalledUpdate",
+    "method": "POST",
+    "path": "/apps/installed/params/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Change app params",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/apps/installed/params/{appInstallId}",
+    "path_params": [
+      "appInstallId"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.AppConfig",
+    "summary": "Search params by appInstallId",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.PortUpdate",
+    "method": "POST",
+    "path": "/apps/installed/port/change",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Change app port",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.AppInstalledSearch",
+    "method": "POST",
+    "path": "/apps/installed/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page app installed",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/apps/installed/sync",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Sync app installed",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/apps/installed/update/versions",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.AppVersion",
+    "summary": "Search app update version by install id",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.AppSearch",
+    "method": "POST",
+    "path": "/apps/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.AppRes",
+    "summary": "List apps",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/apps/services/{key}",
+    "path_params": [
+      "key"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.AppService",
+    "summary": "Search app service by key",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/apps/sync",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Sync app list",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/apps/{key}",
+    "path_params": [
+      "key"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.AppDTO",
+    "summary": "Search app by key",
+    "tags": [
+      "App"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/auth/captcha",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.CaptchaResponse",
+    "summary": "Load captcha",
+    "tags": [
+      "Auth"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/auth/demo",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Check System isDemo",
+    "tags": [
+      "Auth"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/auth/intl",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Check System isIntl",
+    "tags": [
+      "Auth"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/auth/language",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load System Language",
+    "tags": [
+      "Auth"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.Login",
+    "method": "POST",
+    "path": "/auth/login",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.UserLoginInfo",
+    "summary": "User login",
+    "tags": [
+      "Auth"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/auth/logout",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "User logout",
+    "tags": [
+      "Auth"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.MFALogin",
+    "method": "POST",
+    "path": "/auth/mfalogin",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.UserLoginInfo",
+    "summary": "User login with mfa",
+    "tags": [
+      "Auth"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BackupOperate",
+    "method": "POST",
+    "path": "/settings/backup",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create backup account",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.CommonBackup",
+    "method": "POST",
+    "path": "/settings/backup/backup",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Backup system data",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperateByID",
+    "method": "POST",
+    "path": "/settings/backup/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete backup account",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/settings/backup/onedrive",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.OneDriveInfo",
+    "summary": "Load OneDrive info",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BatchDeleteReq",
+    "method": "POST",
+    "path": "/settings/backup/record/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete backup record",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.DownloadRecord",
+    "method": "POST",
+    "path": "/settings/backup/record/download",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Download backup record",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.RecordSearch",
+    "method": "POST",
+    "path": "/settings/backup/record/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page backup records",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.RecordSearchByCronjob",
+    "method": "POST",
+    "path": "/settings/backup/record/search/bycronjob",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page backup records by cronjob",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.RecordSearch",
+    "method": "POST",
+    "path": "/settings/backup/record/size",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.BackupFile",
+    "summary": "Load backup records size",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.RecordSearchByCronjob",
+    "method": "POST",
+    "path": "/settings/backup/record/size/bycronjob",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.BackupFile",
+    "summary": "Load backup records size for cronjob",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.CommonRecover",
+    "method": "POST",
+    "path": "/settings/backup/recover",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Recover system data",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.CommonRecover",
+    "method": "POST",
+    "path": "/settings/backup/recover/byupload",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Recover system data by upload",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/settings/backup/refresh/onedrive",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Refresh OneDrive token",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/settings/backup/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.BackupInfo",
+    "summary": "List backup accounts",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ForBuckets",
+    "method": "POST",
+    "path": "/settings/backup/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "List buckets",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BackupSearchFile",
+    "method": "POST",
+    "path": "/settings/backup/search/files",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "List files from backup accounts",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BackupOperate",
+    "method": "POST",
+    "path": "/settings/backup/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update backup account",
+    "tags": [
+      "Backup Account"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ClamCreate",
+    "method": "POST",
+    "path": "/toolbox/clam",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create clam",
+    "tags": [
+      "Clam"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/toolbox/clam/base",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.ClamBaseInfo",
+    "summary": "Load clam base info",
+    "tags": [
+      "Clam"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ClamDelete",
+    "method": "POST",
+    "path": "/toolbox/clam/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete clam",
+    "tags": [
+      "Clam"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ClamFileReq",
+    "method": "POST",
+    "path": "/toolbox/clam/file/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load clam file",
+    "tags": [
+      "Clam"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.UpdateByNameAndFile",
+    "method": "POST",
+    "path": "/toolbox/clam/file/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update clam file",
+    "tags": [
+      "Clam"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperateByID",
+    "method": "POST",
+    "path": "/toolbox/clam/handle",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Handle clam scan",
+    "tags": [
+      "Clam"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.Operate",
+    "method": "POST",
+    "path": "/toolbox/clam/operate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Operate Clam",
+    "tags": [
+      "Clam"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperateByID",
+    "method": "POST",
+    "path": "/toolbox/clam/record/clean",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Clean clam record",
+    "tags": [
+      "Clam"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ClamLogReq",
+    "method": "POST",
+    "path": "/toolbox/clam/record/log",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load clam record detail",
+    "tags": [
+      "Clam"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ClamLogSearch",
+    "method": "POST",
+    "path": "/toolbox/clam/record/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page clam record",
+    "tags": [
+      "Clam"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchClamWithPage",
+    "method": "POST",
+    "path": "/toolbox/clam/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page clam",
+    "tags": [
+      "Clam"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ClamUpdateStatus",
+    "method": "POST",
+    "path": "/toolbox/clam/status/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update clam status",
+    "tags": [
+      "Clam"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ClamUpdate",
+    "method": "POST",
+    "path": "/toolbox/clam/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update clam",
+    "tags": [
+      "Clam"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/hosts/command",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.CommandInfo",
+    "summary": "List commands",
+    "tags": [
+      "Command"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.CommandOperate",
+    "method": "POST",
+    "path": "/hosts/command",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create command",
+    "tags": [
+      "Command"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BatchDeleteReq",
+    "method": "POST",
+    "path": "/hosts/command/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete command",
+    "tags": [
+      "Command"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchWithPage",
+    "method": "POST",
+    "path": "/hosts/command/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page commands",
+    "tags": [
+      "Command"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/hosts/command/tree",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.CommandTree",
+    "summary": "Tree commands",
+    "tags": [
+      "Command"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.CommandOperate",
+    "method": "POST",
+    "path": "/hosts/command/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update command",
+    "tags": [
+      "Command"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ContainerOperate",
+    "method": "POST",
+    "path": "/containers",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create container",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithName",
+    "method": "POST",
+    "path": "/containers/clean/log",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Clean container log",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ContainerCommit",
+    "method": "POST",
+    "path": "/containers/commit",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Commit Container",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ContainerLog",
+    "method": "POST",
+    "path": "/containers/download/log",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Download Container logs",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithName",
+    "method": "POST",
+    "path": "/containers/info",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.ContainerOperate",
+    "summary": "Load container info",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.InspectReq",
+    "method": "POST",
+    "path": "/containers/inspect",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Container inspect",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/containers/list",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "List containers",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithNameAndType",
+    "method": "POST",
+    "path": "/containers/load/log",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load container log",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ContainerOperation",
+    "method": "POST",
+    "path": "/containers/operate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Operate Container",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ContainerPrune",
+    "method": "POST",
+    "path": "/containers/prune",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.ContainerPruneReport",
+    "summary": "Clean container",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ContainerRename",
+    "method": "POST",
+    "path": "/containers/rename",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Rename Container",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PageContainer",
+    "method": "POST",
+    "path": "/containers/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page containers",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/containers/search/log",
+    "path_params": [],
+    "query_params": [
+      "container",
+      "since",
+      "follow",
+      "tail"
+    ],
+    "response_schema_ref": null,
+    "summary": "Container logs",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/containers/stats/{id}",
+    "path_params": [
+      "id"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.ContainerStats",
+    "summary": "Container stats",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ContainerOperate",
+    "method": "POST",
+    "path": "/containers/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update container",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ContainerUpgrade",
+    "method": "POST",
+    "path": "/containers/upgrade",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Upgrade container",
+    "tags": [
+      "Container"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ComposeCreate",
+    "method": "POST",
+    "path": "/containers/compose",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create compose",
+    "tags": [
+      "Container Compose"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ComposeOperation",
+    "method": "POST",
+    "path": "/containers/compose/operate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Operate compose",
+    "tags": [
+      "Container Compose"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchWithPage",
+    "method": "POST",
+    "path": "/containers/compose/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page composes",
+    "tags": [
+      "Container Compose"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/containers/compose/search/log",
+    "path_params": [],
+    "query_params": [
+      "compose",
+      "since",
+      "follow",
+      "tail"
+    ],
+    "response_schema_ref": null,
+    "summary": "Container Compose logs",
+    "tags": [
+      "Container Compose"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ComposeCreate",
+    "method": "POST",
+    "path": "/containers/compose/test",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Test compose",
+    "tags": [
+      "Container Compose"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ComposeUpdate",
+    "method": "POST",
+    "path": "/containers/compose/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update Container Compose",
+    "tags": [
+      "Container Compose"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/containers/template",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.ComposeTemplateInfo",
+    "summary": "List compose templates",
+    "tags": [
+      "Container Compose-template"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ComposeTemplateCreate",
+    "method": "POST",
+    "path": "/containers/template",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create compose template",
+    "tags": [
+      "Container Compose-template"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BatchDelete",
+    "method": "POST",
+    "path": "/containers/template/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete compose template",
+    "tags": [
+      "Container Compose-template"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchWithPage",
+    "method": "POST",
+    "path": "/containers/template/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page compose templates",
+    "tags": [
+      "Container Compose-template"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ComposeTemplateUpdate",
+    "method": "POST",
+    "path": "/containers/template/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update compose template",
+    "tags": [
+      "Container Compose-template"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/containers/daemonjson",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.DaemonJsonConf",
+    "summary": "Load docker daemon.json",
+    "tags": [
+      "Container Docker"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/containers/daemonjson/file",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load docker daemon.json",
+    "tags": [
+      "Container Docker"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SettingUpdate",
+    "method": "POST",
+    "path": "/containers/daemonjson/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update docker daemon.json",
+    "tags": [
+      "Container Docker"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.DaemonJsonUpdateByFile",
+    "method": "POST",
+    "path": "/containers/daemonjson/update/byfile",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update docker daemon.json by upload file",
+    "tags": [
+      "Container Docker"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.DockerOperation",
+    "method": "POST",
+    "path": "/containers/docker/operate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Operate docker",
+    "tags": [
+      "Container Docker"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/containers/docker/status",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load docker status",
+    "tags": [
+      "Container Docker"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.LogOption",
+    "method": "POST",
+    "path": "/containers/ipv6option/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update docker daemon.json ipv6 option",
+    "tags": [
+      "Container Docker"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.LogOption",
+    "method": "POST",
+    "path": "/containers/logoption/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update docker daemon.json log option",
+    "tags": [
+      "Container Docker"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/containers/image",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.Options",
+    "summary": "load images options",
+    "tags": [
+      "Container Image"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/containers/image/all",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.ImageInfo",
+    "summary": "List all images",
+    "tags": [
+      "Container Image"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ImageBuild",
+    "method": "POST",
+    "path": "/containers/image/build",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Build image",
+    "tags": [
+      "Container Image"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ImageLoad",
+    "method": "POST",
+    "path": "/containers/image/load",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load image",
+    "tags": [
+      "Container Image"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ImagePull",
+    "method": "POST",
+    "path": "/containers/image/pull",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Pull image",
+    "tags": [
+      "Container Image"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ImagePush",
+    "method": "POST",
+    "path": "/containers/image/push",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Push image",
+    "tags": [
+      "Container Image"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BatchDelete",
+    "method": "POST",
+    "path": "/containers/image/remove",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete image",
+    "tags": [
+      "Container Image"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ImageSave",
+    "method": "POST",
+    "path": "/containers/image/save",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Save image",
+    "tags": [
+      "Container Image"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchWithPage",
+    "method": "POST",
+    "path": "/containers/image/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page images",
+    "tags": [
+      "Container Image"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ImageTag",
+    "method": "POST",
+    "path": "/containers/image/tag",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Tag image",
+    "tags": [
+      "Container Image"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/containers/repo",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.ImageRepoOption",
+    "summary": "List image repos",
+    "tags": [
+      "Container Image-repo"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ImageRepoDelete",
+    "method": "POST",
+    "path": "/containers/repo",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create image repo",
+    "tags": [
+      "Container Image-repo"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ImageRepoDelete",
+    "method": "POST",
+    "path": "/containers/repo/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete image repo",
+    "tags": [
+      "Container Image-repo"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchWithPage",
+    "method": "POST",
+    "path": "/containers/repo/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page image repos",
+    "tags": [
+      "Container Image-repo"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperateByID",
+    "method": "GET",
+    "path": "/containers/repo/status",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load repo status",
+    "tags": [
+      "Container Image-repo"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ImageRepoUpdate",
+    "method": "POST",
+    "path": "/containers/repo/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update image repo",
+    "tags": [
+      "Container Image-repo"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/containers/network",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.Options",
+    "summary": "List networks",
+    "tags": [
+      "Container Network"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.NetworkCreate",
+    "method": "POST",
+    "path": "/containers/network",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create network",
+    "tags": [
+      "Container Network"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BatchDelete",
+    "method": "POST",
+    "path": "/containers/network/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete network",
+    "tags": [
+      "Container Network"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchWithPage",
+    "method": "POST",
+    "path": "/containers/network/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page networks",
+    "tags": [
+      "Container Network"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/containers/volume",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.Options",
+    "summary": "List Container Volumes",
+    "tags": [
+      "Container Volume"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.VolumeCreate",
+    "method": "POST",
+    "path": "/containers/volume",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create Container Volume",
+    "tags": [
+      "Container Volume"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BatchDelete",
+    "method": "POST",
+    "path": "/containers/volume/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete Container Volume",
+    "tags": [
+      "Container Volume"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchWithPage",
+    "method": "POST",
+    "path": "/containers/volume/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page Container Volumes",
+    "tags": [
+      "Container Volume"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.CronjobCreate",
+    "method": "POST",
+    "path": "/cronjobs",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create cronjob",
+    "tags": [
+      "Cronjob"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.CronjobBatchDelete",
+    "method": "POST",
+    "path": "/cronjobs/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete cronjob",
+    "tags": [
+      "Cronjob"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.CronjobDownload",
+    "method": "POST",
+    "path": "/cronjobs/download",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Download cronjob records",
+    "tags": [
+      "Cronjob"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperateByID",
+    "method": "POST",
+    "path": "/cronjobs/handle",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Handle cronjob once",
+    "tags": [
+      "Cronjob"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.CronjobClean",
+    "method": "POST",
+    "path": "/cronjobs/records/clean",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Clean job records",
+    "tags": [
+      "Cronjob"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperateByID",
+    "method": "POST",
+    "path": "/cronjobs/records/log",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load Cronjob record log",
+    "tags": [
+      "Cronjob"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PageCronjob",
+    "method": "POST",
+    "path": "/cronjobs/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page cronjobs",
+    "tags": [
+      "Cronjob"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchRecord",
+    "method": "POST",
+    "path": "/cronjobs/search/records",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page job records",
+    "tags": [
+      "Cronjob"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.CronjobUpdateStatus",
+    "method": "POST",
+    "path": "/cronjobs/status",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update cronjob status",
+    "tags": [
+      "Cronjob"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.CronjobUpdate",
+    "method": "POST",
+    "path": "/cronjobs/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update cronjob",
+    "tags": [
+      "Cronjob"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/dashboard/base/os",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.OsInfo",
+    "summary": "Load os info",
+    "tags": [
+      "Dashboard"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/dashboard/base/{ioOption}/{netOption}",
+    "path_params": [
+      "ioOption",
+      "netOption"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.DashboardBase",
+    "summary": "Load dashboard base info",
+    "tags": [
+      "Dashboard"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.DashboardReq",
+    "method": "POST",
+    "path": "/dashboard/current",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.DashboardCurrent",
+    "summary": "Load dashboard current info",
+    "tags": [
+      "Dashboard"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/dashboard/system/restart/{operation}",
+    "path_params": [
+      "operation"
+    ],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "System restart panel",
+    "tags": [
+      "Dashboard"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.DatabaseCreate",
+    "method": "POST",
+    "path": "/databases/db",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create database",
+    "tags": [
+      "Database"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.DatabaseCreate",
+    "method": "POST",
+    "path": "/databases/db/check",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Check database",
+    "tags": [
+      "Database"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.DatabaseDelete",
+    "method": "POST",
+    "path": "/databases/db/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete database",
+    "tags": [
+      "Database"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/databases/db/item/{type}",
+    "path_params": [
+      "type"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.DatabaseItem",
+    "summary": "Retrieve database list based on type",
+    "tags": [
+      "Database"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/databases/db/list/{type}",
+    "path_params": [
+      "type"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.DatabaseOption",
+    "summary": "List databases",
+    "tags": [
+      "Database"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.DatabaseSearch",
+    "method": "POST",
+    "path": "/databases/db/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page databases",
+    "tags": [
+      "Database"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.DatabaseUpdate",
+    "method": "POST",
+    "path": "/databases/db/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update database",
+    "tags": [
+      "Database"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/databases/db/{name}",
+    "path_params": [
+      "name"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.DatabaseInfo",
+    "summary": "Get databases",
+    "tags": [
+      "Database"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperateByID",
+    "method": "POST",
+    "path": "/db/remote/del/check",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Check before delete remote database",
+    "tags": [
+      "Database"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithNameAndType",
+    "method": "POST",
+    "path": "/databases/common/info",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.DBBaseInfo",
+    "summary": "Load base info",
+    "tags": [
+      "Database Common"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithNameAndType",
+    "method": "POST",
+    "path": "/databases/common/load/file",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load Database conf",
+    "tags": [
+      "Database Common"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.DBConfUpdateByFile",
+    "method": "POST",
+    "path": "/databases/common/update/conf",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update conf by upload file",
+    "tags": [
+      "Database Common"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.MysqlDBCreate",
+    "method": "POST",
+    "path": "/databases",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create mysql database",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BindUser",
+    "method": "POST",
+    "path": "/databases/bind",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Bind user of mysql database",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ChangeDBInfo",
+    "method": "POST",
+    "path": "/databases/change/access",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Change mysql access",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ChangeDBInfo",
+    "method": "POST",
+    "path": "/databases/change/password",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Change mysql password",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.MysqlDBDelete",
+    "method": "POST",
+    "path": "/databases/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete mysql database",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.MysqlDBDeleteCheck",
+    "method": "POST",
+    "path": "/databases/del/check",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Check before delete mysql database",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.UpdateDescription",
+    "method": "POST",
+    "path": "/databases/description/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update mysql database description",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.MysqlLoadDB",
+    "method": "POST",
+    "path": "/databases/load",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load mysql database from remote",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PageInfo",
+    "method": "GET",
+    "path": "/databases/options",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.MysqlOption",
+    "summary": "List mysql database names",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithNameAndType",
+    "method": "POST",
+    "path": "/databases/remote",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load mysql remote access",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.MysqlDBSearch",
+    "method": "POST",
+    "path": "/databases/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page mysql databases",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithNameAndType",
+    "method": "POST",
+    "path": "/databases/status",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.MysqlStatus",
+    "summary": "Load mysql status info",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithNameAndType",
+    "method": "POST",
+    "path": "/databases/variables",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.MysqlVariables",
+    "summary": "Load mysql variables info",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.MysqlVariablesUpdate",
+    "method": "POST",
+    "path": "/databases/variables/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update mysql variables",
+    "tags": [
+      "Database Mysql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PostgresqlDBCreate",
+    "method": "POST",
+    "path": "/databases/pg",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create postgresql database",
+    "tags": [
+      "Database Postgresql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PostgresqlBindUser",
+    "method": "POST",
+    "path": "/databases/pg/bind",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Bind postgresql user",
+    "tags": [
+      "Database Postgresql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PostgresqlDBDelete",
+    "method": "POST",
+    "path": "/databases/pg/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete postgresql database",
+    "tags": [
+      "Database Postgresql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PostgresqlDBDeleteCheck",
+    "method": "POST",
+    "path": "/databases/pg/del/check",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Check before delete postgresql database",
+    "tags": [
+      "Database Postgresql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.UpdateDescription",
+    "method": "POST",
+    "path": "/databases/pg/description",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update postgresql database description",
+    "tags": [
+      "Database Postgresql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ChangeDBInfo",
+    "method": "POST",
+    "path": "/databases/pg/password",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Change postgresql password",
+    "tags": [
+      "Database Postgresql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ChangeDBInfo",
+    "method": "POST",
+    "path": "/databases/pg/privileges",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Change postgresql privileges",
+    "tags": [
+      "Database Postgresql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PostgresqlDBSearch",
+    "method": "POST",
+    "path": "/databases/pg/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page postgresql databases",
+    "tags": [
+      "Database Postgresql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PostgresqlLoadDB",
+    "method": "POST",
+    "path": "/databases/pg/{database}/load",
+    "path_params": [
+      "database"
+    ],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load postgresql database from remote",
+    "tags": [
+      "Database Postgresql"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithName",
+    "method": "POST",
+    "path": "/databases/redis/conf",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.RedisConf",
+    "summary": "Load redis conf",
+    "tags": [
+      "Database Redis"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.RedisConfUpdate",
+    "method": "POST",
+    "path": "/databases/redis/conf/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update redis conf",
+    "tags": [
+      "Database Redis"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/databases/redis/install/cli",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Install redis-cli",
+    "tags": [
+      "Database Redis"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ChangeRedisPass",
+    "method": "POST",
+    "path": "/databases/redis/password",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Change redis password",
+    "tags": [
+      "Database Redis"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithName",
+    "method": "POST",
+    "path": "/databases/redis/persistence/conf",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.RedisPersistence",
+    "summary": "Load redis persistence conf",
+    "tags": [
+      "Database Redis"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.RedisConfPersistenceUpdate",
+    "method": "POST",
+    "path": "/databases/redis/persistence/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update redis persistence conf",
+    "tags": [
+      "Database Redis"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithName",
+    "method": "POST",
+    "path": "/databases/redis/status",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.RedisStatus",
+    "summary": "Load redis status info",
+    "tags": [
+      "Database Redis"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/toolbox/clean",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Clean system",
+    "tags": [
+      "Device"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/toolbox/device/base",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.DeviceBaseInfo",
+    "summary": "Load device base info",
+    "tags": [
+      "Device"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SettingUpdate",
+    "method": "POST",
+    "path": "/toolbox/device/check/dns",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Check device DNS conf",
+    "tags": [
+      "Device"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperationWithName",
+    "method": "POST",
+    "path": "/toolbox/device/conf",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "load conf",
+    "tags": [
+      "Device"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.UpdateByNameAndFile",
+    "method": "POST",
+    "path": "/toolbox/device/update/byconf",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update device conf by file",
+    "tags": [
+      "Device"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SettingUpdate",
+    "method": "POST",
+    "path": "/toolbox/device/update/conf",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update device",
+    "tags": [
+      "Device"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/toolbox/device/update/host",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update device hosts",
+    "tags": [
+      "Device"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ChangePasswd",
+    "method": "POST",
+    "path": "/toolbox/device/update/passwd",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update device passwd",
+    "tags": [
+      "Device"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SwapHelper",
+    "method": "POST",
+    "path": "/toolbox/device/update/swap",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update device swap",
+    "tags": [
+      "Device"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/toolbox/device/zone/options",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "list time zone options",
+    "tags": [
+      "Device"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/toolbox/scan",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.CleanData",
+    "summary": "Scan system",
+    "tags": [
+      "Device"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.FtpCreate",
+    "method": "POST",
+    "path": "/toolbox/ftp",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create FTP user",
+    "tags": [
+      "FTP"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/toolbox/ftp/base",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.FtpBaseInfo",
+    "summary": "Load FTP base info",
+    "tags": [
+      "FTP"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BatchDeleteReq",
+    "method": "POST",
+    "path": "/toolbox/ftp/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete FTP user",
+    "tags": [
+      "FTP"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.FtpLogSearch",
+    "method": "POST",
+    "path": "/toolbox/ftp/log/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Load FTP operation log",
+    "tags": [
+      "FTP"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.Operate",
+    "method": "POST",
+    "path": "/toolbox/ftp/operate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Operate FTP",
+    "tags": [
+      "FTP"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchWithPage",
+    "method": "POST",
+    "path": "/toolbox/ftp/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page FTP user",
+    "tags": [
+      "FTP"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BatchDeleteReq",
+    "method": "POST",
+    "path": "/toolbox/ftp/sync",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Sync FTP user",
+    "tags": [
+      "FTP"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.FtpUpdate",
+    "method": "POST",
+    "path": "/toolbox/ftp/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update FTP user",
+    "tags": [
+      "FTP"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/toolbox/fail2ban/base",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.Fail2BanBaseInfo",
+    "summary": "Load fail2ban base info",
+    "tags": [
+      "Fail2ban"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/toolbox/fail2ban/load/conf",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load fail2ban conf",
+    "tags": [
+      "Fail2ban"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.Operate",
+    "method": "POST",
+    "path": "/toolbox/fail2ban/operate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Operate fail2ban",
+    "tags": [
+      "Fail2ban"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.Operate",
+    "method": "POST",
+    "path": "/toolbox/fail2ban/operate/sshd",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Operate sshd of fail2ban",
+    "tags": [
+      "Fail2ban"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.Fail2BanSearch",
+    "method": "POST",
+    "path": "/toolbox/fail2ban/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Page fail2ban ip list",
+    "tags": [
+      "Fail2ban"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.Fail2BanUpdate",
+    "method": "POST",
+    "path": "/toolbox/fail2ban/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update fail2ban conf",
+    "tags": [
+      "Fail2ban"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.UpdateByFile",
+    "method": "POST",
+    "path": "/toolbox/fail2ban/update/byconf",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update fail2ban conf by file",
+    "tags": [
+      "Fail2ban"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileCreate",
+    "method": "POST",
+    "path": "/files",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create file",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FilePathsCheck",
+    "method": "POST",
+    "path": "/files/batch/check",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.ExistFileInfo",
+    "summary": "Batch check file exist",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileBatchDelete",
+    "method": "POST",
+    "path": "/files/batch/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Batch delete file",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileRoleReq",
+    "method": "POST",
+    "path": "/files/batch/role",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Batch change file mode and owner",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FilePathCheck",
+    "method": "POST",
+    "path": "/files/check",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Check file exist",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileDownload",
+    "method": "POST",
+    "path": "/files/chunkdownload",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Chunk Download file",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/files/chunkupload",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Chunk upload file",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileCompress",
+    "method": "POST",
+    "path": "/files/compress",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Compress file",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileContentReq",
+    "method": "POST",
+    "path": "/files/content",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.FileInfo",
+    "summary": "Load file content",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileDeCompress",
+    "method": "POST",
+    "path": "/files/decompress",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Decompress file",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileDelete",
+    "method": "POST",
+    "path": "/files/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete file",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/files/download",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Download file",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FavoriteCreate",
+    "method": "POST",
+    "path": "/files/favorite",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/model.Favorite",
+    "summary": "Create favorite",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FavoriteDelete",
+    "method": "POST",
+    "path": "/files/favorite/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete favorite",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PageInfo",
+    "method": "POST",
+    "path": "/files/favorite/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "List favorites",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileCreate",
+    "method": "POST",
+    "path": "/files/mode",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Change file mode",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileMove",
+    "method": "POST",
+    "path": "/files/move",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Move file",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileRoleUpdate",
+    "method": "POST",
+    "path": "/files/owner",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Change file owner",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileReadByLineReq",
+    "method": "POST",
+    "path": "/files/read",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.FileLineContent",
+    "summary": "Read file by Line",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/files/recycle/clear",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Clear Recycle Bin files",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.RecycleBinReduce",
+    "method": "POST",
+    "path": "/files/recycle/reduce",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Reduce Recycle Bin files",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PageInfo",
+    "method": "POST",
+    "path": "/files/recycle/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "List Recycle Bin files",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/files/recycle/status",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Get Recycle Bin status",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileRename",
+    "method": "POST",
+    "path": "/files/rename",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Change file name",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileEdit",
+    "method": "POST",
+    "path": "/files/save",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update file content",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileOption",
+    "method": "POST",
+    "path": "/files/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.FileInfo",
+    "summary": "List files",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.DirSizeReq",
+    "method": "POST",
+    "path": "/files/size",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.DirSizeRes",
+    "summary": "Load file size",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileOption",
+    "method": "POST",
+    "path": "/files/tree",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.FileTree",
+    "summary": "Load files tree",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/files/upload",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Upload file",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.SearchUploadWithPage",
+    "method": "POST",
+    "path": "/files/upload/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page file",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.FileWget",
+    "method": "POST",
+    "path": "/files/wget",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.FileWgetRes",
+    "summary": "Wget file",
+    "tags": [
+      "File"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/hosts/firewall/base",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.FirewallBaseInfo",
+    "summary": "Load firewall base info",
+    "tags": [
+      "Firewall"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BatchRuleOperate",
+    "method": "POST",
+    "path": "/hosts/firewall/batch",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Batch create group",
+    "tags": [
+      "Firewall"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ForwardRuleOperate",
+    "method": "POST",
+    "path": "/hosts/firewall/forward",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update firewall port group",
+    "tags": [
+      "Firewall"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.AddrRuleOperate",
+    "method": "POST",
+    "path": "/hosts/firewall/ip",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create firewall group",
+    "tags": [
+      "Firewall"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.FirewallOperation",
+    "method": "POST",
+    "path": "/hosts/firewall/operate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Page firewall status",
+    "tags": [
+      "Firewall"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PortRuleOperate",
+    "method": "POST",
+    "path": "/hosts/firewall/port",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create firewall port group",
+    "tags": [
+      "Firewall"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.RuleSearch",
+    "method": "POST",
+    "path": "/hosts/firewall/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page firewall rules",
+    "tags": [
+      "Firewall"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.AddrRuleUpdate",
+    "method": "POST",
+    "path": "/hosts/firewall/update/addr",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update address group",
+    "tags": [
+      "Firewall"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.UpdateFirewallDescription",
+    "method": "POST",
+    "path": "/hosts/firewall/update/description",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update rule description",
+    "tags": [
+      "Firewall"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PortRuleUpdate",
+    "method": "POST",
+    "path": "/hosts/firewall/update/port",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update firewall group",
+    "tags": [
+      "Firewall"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.HostOperate",
+    "method": "POST",
+    "path": "/hosts",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.HostInfo",
+    "summary": "Create host",
+    "tags": [
+      "Host"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BatchDeleteReq",
+    "method": "POST",
+    "path": "/hosts/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete host",
+    "tags": [
+      "Host"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchHostWithPage",
+    "method": "POST",
+    "path": "/hosts/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page host",
+    "tags": [
+      "Host"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/hosts/test/byid/{id}",
+    "path_params": [
+      "id"
+    ],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Test host conn by host id",
+    "tags": [
+      "Host"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.HostConnTest",
+    "method": "POST",
+    "path": "/hosts/test/byinfo",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Test host conn by info",
+    "tags": [
+      "Host"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchForTree",
+    "method": "POST",
+    "path": "/hosts/tree",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.HostTree",
+    "summary": "Load host tree",
+    "tags": [
+      "Host"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.HostOperate",
+    "method": "POST",
+    "path": "/hosts/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update host",
+    "tags": [
+      "Host"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ChangeHostGroup",
+    "method": "POST",
+    "path": "/hosts/update/group",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update host group",
+    "tags": [
+      "Host"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.HostToolReq",
+    "method": "POST",
+    "path": "/hosts/tool",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.HostToolRes",
+    "summary": "Get tool status",
+    "tags": [
+      "Host tool"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.HostToolConfig",
+    "method": "POST",
+    "path": "/hosts/tool/config",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.HostToolConfig",
+    "summary": "Get tool config",
+    "tags": [
+      "Host tool"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.HostToolCreate",
+    "method": "POST",
+    "path": "/hosts/tool/create",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create Host tool Config",
+    "tags": [
+      "Host tool"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.HostToolLogReq",
+    "method": "POST",
+    "path": "/hosts/tool/log",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Get tool logs",
+    "tags": [
+      "Host tool"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.HostToolReq",
+    "method": "POST",
+    "path": "/hosts/tool/operate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Operate tool",
+    "tags": [
+      "Host tool"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/hosts/tool/supervisor/process",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.SupervisorProcessConfig",
+    "summary": "Get Supervisor process config",
+    "tags": [
+      "Host tool"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.SupervisorProcessConfig",
+    "method": "POST",
+    "path": "/hosts/tool/supervisor/process",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create Supervisor process",
+    "tags": [
+      "Host tool"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.SupervisorProcessFileReq",
+    "method": "POST",
+    "path": "/hosts/tool/supervisor/process/file",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Get Supervisor process config",
+    "tags": [
+      "Host tool"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.CleanLog",
+    "method": "POST",
+    "path": "/logs/clean",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Clean operation logs",
+    "tags": [
+      "Logs"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchLgLogWithPage",
+    "method": "POST",
+    "path": "/logs/login",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page login logs",
+    "tags": [
+      "Logs"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchOpLogWithPage",
+    "method": "POST",
+    "path": "/logs/operation",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page operation logs",
+    "tags": [
+      "Logs"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/logs/system",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load system logs",
+    "tags": [
+      "Logs"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/logs/system/files",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load system log files",
+    "tags": [
+      "Logs"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/hosts/monitor/clean",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Clean monitor datas",
+    "tags": [
+      "Monitor"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.MonitorSearch",
+    "method": "POST",
+    "path": "/hosts/monitor/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.MonitorData",
+    "summary": "Load monitor datas",
+    "tags": [
+      "Monitor"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/openresty",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.NginxFile",
+    "summary": "Load OpenResty conf",
+    "tags": [
+      "OpenResty"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/openresty/clear",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Clear OpenResty proxy cache",
+    "tags": [
+      "OpenResty"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxConfigFileUpdate",
+    "method": "POST",
+    "path": "/openresty/file",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update OpenResty conf by upload file",
+    "tags": [
+      "OpenResty"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxScopeReq",
+    "method": "POST",
+    "path": "/openresty/scope",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.NginxParam",
+    "summary": "Load partial OpenResty conf",
+    "tags": [
+      "OpenResty"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/openresty/status",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.NginxStatus",
+    "summary": "Load OpenResty status info",
+    "tags": [
+      "OpenResty"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxConfigUpdate",
+    "method": "POST",
+    "path": "/openresty/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update OpenResty conf",
+    "tags": [
+      "OpenResty"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.PHPExtensionsCreate",
+    "method": "POST",
+    "path": "/runtimes/php/extensions",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create Extensions",
+    "tags": [
+      "PHP Extensions"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.PHPExtensionsDelete",
+    "method": "POST",
+    "path": "/runtimes/php/extensions/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete Extensions",
+    "tags": [
+      "PHP Extensions"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.PHPExtensionsSearch",
+    "method": "POST",
+    "path": "/runtimes/php/extensions/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page Extensions",
+    "tags": [
+      "PHP Extensions"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.PHPExtensionsUpdate",
+    "method": "POST",
+    "path": "/runtimes/php/extensions/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update Extensions",
+    "tags": [
+      "PHP Extensions"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.ProcessReq",
+    "method": "POST",
+    "path": "/process/stop",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Stop Process",
+    "tags": [
+      "Process"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/hosts/command/redis",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.RedisCommand",
+    "summary": "List redis commands",
+    "tags": [
+      "Redis Command"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.RedisCommand",
+    "method": "POST",
+    "path": "/hosts/command/redis",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Save redis command",
+    "tags": [
+      "Redis Command"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BatchDeleteReq",
+    "method": "POST",
+    "path": "/hosts/command/redis/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete redis command",
+    "tags": [
+      "Redis Command"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchWithPage",
+    "method": "POST",
+    "path": "/hosts/command/redis/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page redis commands",
+    "tags": [
+      "Redis Command"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.RuntimeCreate",
+    "method": "POST",
+    "path": "/runtimes",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/model.Runtime",
+    "summary": "Create runtime",
+    "tags": [
+      "Runtime"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NodeModuleReq",
+    "method": "POST",
+    "path": "/runtimes/node/modules",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.NodeModule",
+    "summary": "Get Node modules",
+    "tags": [
+      "Runtime"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NodeModuleReq",
+    "method": "POST",
+    "path": "/runtimes/node/modules/operate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Operate Node modules",
+    "tags": [
+      "Runtime"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NodePackageReq",
+    "method": "POST",
+    "path": "/runtimes/node/package",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.PackageScripts",
+    "summary": "Get Node package scripts",
+    "tags": [
+      "Runtime"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.RuntimeOperate",
+    "method": "POST",
+    "path": "/runtimes/operate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Operate runtime",
+    "tags": [
+      "Runtime"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.RuntimeSearch",
+    "method": "POST",
+    "path": "/runtimes/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "List runtimes",
+    "tags": [
+      "Runtime"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/runtimes/sync",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Sync runtime status",
+    "tags": [
+      "Runtime"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.RuntimeUpdate",
+    "method": "POST",
+    "path": "/runtimes/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update runtime",
+    "tags": [
+      "Runtime"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/runtimes/{id}",
+    "path_params": [
+      "id"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.RuntimeDTO",
+    "summary": "Get runtime",
+    "tags": [
+      "Runtime"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SSHConf",
+    "method": "POST",
+    "path": "/hosts/conffile/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update host SSH setting by file",
+    "tags": [
+      "SSH"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/hosts/ssh/conf",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load host SSH conf",
+    "tags": [
+      "SSH"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.GenerateSSH",
+    "method": "POST",
+    "path": "/hosts/ssh/generate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Generate host SSH secret",
+    "tags": [
+      "SSH"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SearchSSHLog",
+    "method": "POST",
+    "path": "/hosts/ssh/log",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.SSHLog",
+    "summary": "Load host SSH logs",
+    "tags": [
+      "SSH"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.Operate",
+    "method": "POST",
+    "path": "/hosts/ssh/operate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Operate SSH",
+    "tags": [
+      "SSH"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/hosts/ssh/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.SSHInfo",
+    "summary": "Load host SSH setting info",
+    "tags": [
+      "SSH"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.GenerateLoad",
+    "method": "POST",
+    "path": "/hosts/ssh/secret",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load host SSH secret",
+    "tags": [
+      "SSH"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SSHUpdate",
+    "method": "POST",
+    "path": "/hosts/ssh/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update host SSH setting",
+    "tags": [
+      "SSH"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.GroupCreate",
+    "method": "POST",
+    "path": "/groups",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create system group",
+    "tags": [
+      "System Group"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperateByID",
+    "method": "POST",
+    "path": "/groups/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete system group",
+    "tags": [
+      "System Group"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.GroupSearch",
+    "method": "POST",
+    "path": "/groups/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.GroupInfo",
+    "summary": "List system groups",
+    "tags": [
+      "System Group"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.GroupUpdate",
+    "method": "POST",
+    "path": "/groups/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update system group",
+    "tags": [
+      "System Group"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/settings/api/config/generate/key",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Generate api key",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ApiInterfaceConfig",
+    "method": "POST",
+    "path": "/settings/api/config/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update api config",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/settings/basedir",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load local base dir",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.BindInfo",
+    "method": "POST",
+    "path": "/settings/bind/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update system bind info",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PasswordUpdate",
+    "method": "POST",
+    "path": "/settings/expired/handle",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Reset system password expired",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/settings/interface",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load system address",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SettingUpdate",
+    "method": "POST",
+    "path": "/settings/menu/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update system setting",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.MfaCredential",
+    "method": "POST",
+    "path": "/settings/mfa",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/mfa.Otp",
+    "summary": "Load mfa info",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.MfaCredential",
+    "method": "POST",
+    "path": "/settings/mfa/bind",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Bind mfa",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PasswordUpdate",
+    "method": "POST",
+    "path": "/settings/password/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update system password",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PortUpdate",
+    "method": "POST",
+    "path": "/settings/port/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update system port",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.ProxyUpdate",
+    "method": "POST",
+    "path": "/settings/proxy/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update proxy setting",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/settings/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.SettingInfo",
+    "summary": "Load system setting info",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/settings/search/available",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load system available status",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SnapshotCreate",
+    "method": "POST",
+    "path": "/settings/snapshot",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create system snapshot",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SnapshotBatchDelete",
+    "method": "POST",
+    "path": "/settings/snapshot/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete system backup",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.UpdateDescription",
+    "method": "POST",
+    "path": "/settings/snapshot/description/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update snapshot description",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SnapshotImport",
+    "method": "POST",
+    "path": "/settings/snapshot/import",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Import system snapshot",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SnapshotRecover",
+    "method": "POST",
+    "path": "/settings/snapshot/recover",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Recover system backup",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SnapshotRecover",
+    "method": "POST",
+    "path": "/settings/snapshot/rollback",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Rollback system backup",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PageSnapshot",
+    "method": "POST",
+    "path": "/settings/snapshot/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page system snapshot",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PageSnapshot",
+    "method": "POST",
+    "path": "/settings/snapshot/size",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.SnapshotFile",
+    "summary": "Load system snapshot size",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.OperateByID",
+    "method": "POST",
+    "path": "/settings/snapshot/status",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.SnapshotStatus",
+    "summary": "Load Snapshot status",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "POST",
+    "path": "/settings/ssl/download",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Download system cert",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/settings/ssl/info",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.SSLInfo",
+    "summary": "Load system cert info",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SSLUpdate",
+    "method": "POST",
+    "path": "/settings/ssl/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update system ssl",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.SettingUpdate",
+    "method": "POST",
+    "path": "/settings/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update system setting",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.Upgrade",
+    "method": "GET",
+    "path": "/settings/upgrade",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Load release notes by version",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.Upgrade",
+    "method": "POST",
+    "path": "/settings/upgrade",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Upgrade",
+    "tags": [
+      "System Setting"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.RuntimeDelete",
+    "method": "POST",
+    "path": "/runtimes/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete runtime",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteCreate",
+    "method": "POST",
+    "path": "/websites",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create website",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxAuthReq",
+    "method": "POST",
+    "path": "/websites/auths",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.NginxAuthRes",
+    "summary": "Get AuthBasic conf",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxAuthUpdate",
+    "method": "POST",
+    "path": "/websites/auths/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Get AuthBasic conf",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteInstallCheckReq",
+    "method": "POST",
+    "path": "/websites/check",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsitePreInstallCheck",
+    "summary": "Check before create website",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteHtmlUpdate",
+    "method": "POST",
+    "path": "/websites/default/html/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update default html",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/websites/default/html/{type}",
+    "path_params": [
+      "type"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteHtmlRes",
+    "summary": "Get default html",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteDefaultUpdate",
+    "method": "POST",
+    "path": "/websites/default/server",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Change default server",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteDelete",
+    "method": "POST",
+    "path": "/websites/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete website",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteCommonReq",
+    "method": "POST",
+    "path": "/websites/dir",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteDirConfig",
+    "summary": "Get website dir",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteUpdateDirPermission",
+    "method": "POST",
+    "path": "/websites/dir/permission",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update Site Dir permission",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteUpdateDir",
+    "method": "POST",
+    "path": "/websites/dir/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update Site Dir",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxCommonReq",
+    "method": "POST",
+    "path": "/websites/leech",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.NginxAntiLeechRes",
+    "summary": "Get AntiLeech conf",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxAntiLeechUpdate",
+    "method": "POST",
+    "path": "/websites/leech/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update AntiLeech conf",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/websites/list",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteDTO",
+    "summary": "List websites",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteLogReq",
+    "method": "POST",
+    "path": "/websites/log",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteLog",
+    "summary": "Operate website log",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteOp",
+    "method": "POST",
+    "path": "/websites/operate",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Operate website",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/websites/options",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteOption",
+    "summary": "List website names",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/websites/php/config/{id}",
+    "path_params": [
+      "id"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.PHPConfig",
+    "summary": "Load website php conf",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteProxyReq",
+    "method": "POST",
+    "path": "/websites/proxies",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/request.WebsiteProxyConfig",
+    "summary": "Get proxy conf",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteProxyDel",
+    "method": "POST",
+    "path": "/websites/proxies/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete proxy conf",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteProxyConfig",
+    "method": "POST",
+    "path": "/websites/proxies/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update proxy conf",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxProxyUpdate",
+    "method": "POST",
+    "path": "/websites/proxy/file",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update proxy file",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteProxyReq",
+    "method": "POST",
+    "path": "/websites/redirect",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.NginxRedirectConfig",
+    "summary": "Get redirect conf",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxRedirectUpdate",
+    "method": "POST",
+    "path": "/websites/redirect/file",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update redirect file",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxRedirectReq",
+    "method": "POST",
+    "path": "/websites/redirect/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update redirect conf",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxRewriteReq",
+    "method": "POST",
+    "path": "/websites/rewrite",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.NginxRewriteRes",
+    "summary": "Get rewrite conf",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxRewriteUpdate",
+    "method": "POST",
+    "path": "/websites/rewrite/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update rewrite conf",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteSearch",
+    "method": "POST",
+    "path": "/websites/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page websites",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteUpdate",
+    "method": "POST",
+    "path": "/websites/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update website",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/websites/{id}",
+    "path_params": [
+      "id"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteDTO",
+    "summary": "Search website by id",
+    "tags": [
+      "Website"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteAcmeAccountCreate",
+    "method": "POST",
+    "path": "/websites/acme",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteAcmeAccountDTO",
+    "summary": "Create website acme account",
+    "tags": [
+      "Website Acme"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteResourceReq",
+    "method": "POST",
+    "path": "/websites/acme/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete website acme account",
+    "tags": [
+      "Website Acme"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PageInfo",
+    "method": "POST",
+    "path": "/websites/acme/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page website acme accounts",
+    "tags": [
+      "Website Acme"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteCACreate",
+    "method": "POST",
+    "path": "/websites/ca",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/request.WebsiteCACreate",
+    "summary": "Create website ca",
+    "tags": [
+      "Website CA"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteCommonReq",
+    "method": "POST",
+    "path": "/websites/ca/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete website ca",
+    "tags": [
+      "Website CA"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteResourceReq",
+    "method": "POST",
+    "path": "/websites/ca/download",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Download CA file",
+    "tags": [
+      "Website CA"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteCAObtain",
+    "method": "POST",
+    "path": "/websites/ca/obtain",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Obtain SSL",
+    "tags": [
+      "Website CA"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteCAObtain",
+    "method": "POST",
+    "path": "/websites/ca/renew",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Renew Obtain SSL",
+    "tags": [
+      "Website CA"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteCASearch",
+    "method": "POST",
+    "path": "/websites/ca/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page website ca",
+    "tags": [
+      "Website CA"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/websites/ca/{id}",
+    "path_params": [
+      "id"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteCADTO",
+    "summary": "Get website ca",
+    "tags": [
+      "Website CA"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteDnsAccountCreate",
+    "method": "POST",
+    "path": "/websites/dns",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Create website dns account",
+    "tags": [
+      "Website DNS"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteResourceReq",
+    "method": "POST",
+    "path": "/websites/dns/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete website dns account",
+    "tags": [
+      "Website DNS"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/dto.PageInfo",
+    "method": "POST",
+    "path": "/websites/dns/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/dto.PageResult",
+    "summary": "Page website dns accounts",
+    "tags": [
+      "Website DNS"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteDnsAccountUpdate",
+    "method": "POST",
+    "path": "/websites/dns/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update website dns account",
+    "tags": [
+      "Website DNS"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteDomainCreate",
+    "method": "POST",
+    "path": "/websites/domains",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/model.WebsiteDomain",
+    "summary": "Create website domain",
+    "tags": [
+      "Website Domain"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteDomainDelete",
+    "method": "POST",
+    "path": "/websites/domains/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete website domain",
+    "tags": [
+      "Website Domain"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/websites/domains/{websiteId}",
+    "path_params": [
+      "websiteId"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/model.WebsiteDomain",
+    "summary": "Search website domains by websiteId",
+    "tags": [
+      "Website Domain"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/websites/{id}/https",
+    "path_params": [
+      "id"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteHTTPS",
+    "summary": "Load https conf",
+    "tags": [
+      "Website HTTPS"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteHTTPSOp",
+    "method": "POST",
+    "path": "/websites/{id}/https",
+    "path_params": [
+      "id"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteHTTPS",
+    "summary": "Update https conf",
+    "tags": [
+      "Website HTTPS"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxScopeReq",
+    "method": "POST",
+    "path": "/websites/config",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteNginxConfig",
+    "summary": "Load nginx conf",
+    "tags": [
+      "Website Nginx"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.NginxConfigUpdate",
+    "method": "POST",
+    "path": "/websites/config/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update nginx conf",
+    "tags": [
+      "Website Nginx"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteNginxUpdate",
+    "method": "POST",
+    "path": "/websites/nginx/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update website nginx conf",
+    "tags": [
+      "Website Nginx"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/websites/{id}/config/{type}",
+    "path_params": [
+      "id",
+      "type"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.FileInfo",
+    "summary": "Search website nginx by id",
+    "tags": [
+      "Website Nginx"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsitePHPConfigUpdate",
+    "method": "POST",
+    "path": "/websites/php/config",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update website php conf",
+    "tags": [
+      "Website PHP"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsitePHPFileUpdate",
+    "method": "POST",
+    "path": "/websites/php/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update php conf",
+    "tags": [
+      "Website PHP"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsitePHPVersionReq",
+    "method": "POST",
+    "path": "/websites/php/version",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update php version",
+    "tags": [
+      "Website PHP"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteSSLCreate",
+    "method": "POST",
+    "path": "/websites/ssl",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/request.WebsiteSSLCreate",
+    "summary": "Create website ssl",
+    "tags": [
+      "Website SSL"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteBatchDelReq",
+    "method": "POST",
+    "path": "/websites/ssl/del",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Delete website ssl",
+    "tags": [
+      "Website SSL"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteResourceReq",
+    "method": "POST",
+    "path": "/websites/ssl/download",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Download SSL file",
+    "tags": [
+      "Website SSL"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteSSLApply",
+    "method": "POST",
+    "path": "/websites/ssl/obtain",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Apply  ssl",
+    "tags": [
+      "Website SSL"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteDNSReq",
+    "method": "POST",
+    "path": "/websites/ssl/resolve",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteDNSRes",
+    "summary": "Resolve website ssl",
+    "tags": [
+      "Website SSL"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteSSLSearch",
+    "method": "POST",
+    "path": "/websites/ssl/search",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteSSLDTO",
+    "summary": "Page website ssl",
+    "tags": [
+      "Website SSL"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteSSLUpdate",
+    "method": "POST",
+    "path": "/websites/ssl/update",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Update Website ssl",
+    "tags": [
+      "Website SSL"
+    ]
+  },
+  {
+    "body_schema_ref": "#/definitions/request.WebsiteSSLUpload",
+    "method": "POST",
+    "path": "/websites/ssl/upload",
+    "path_params": [],
+    "query_params": [],
+    "response_schema_ref": null,
+    "summary": "Upload Website ssl",
+    "tags": [
+      "Website SSL"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/websites/ssl/website/{websiteId}",
+    "path_params": [
+      "websiteId"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteSSLDTO",
+    "summary": "Search website ssl by website id",
+    "tags": [
+      "Website SSL"
+    ]
+  },
+  {
+    "body_schema_ref": null,
+    "method": "GET",
+    "path": "/websites/ssl/{id}",
+    "path_params": [
+      "id"
+    ],
+    "query_params": [],
+    "response_schema_ref": "#/definitions/response.WebsiteSSLDTO",
+    "summary": "Search website ssl by id",
+    "tags": [
+      "Website SSL"
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "1Panel Operator"
+  short_description: "Operate a 1Panel instance via API"
+  default_prompt: "Use $1panel-operator to inspect, diagnose, or change 1Panel-managed resources."

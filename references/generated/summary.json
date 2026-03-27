@@ -1,0 +1,249 @@
+{
+  "basePath": "/api/v1",
+  "definition_count": 366,
+  "operation_count": 415,
+  "path_count": 405,
+  "swagger": "2.0",
+  "tags": [
+    {
+      "count": 31,
+      "slug": "file",
+      "tag": "File"
+    },
+    {
+      "count": 31,
+      "slug": "website",
+      "tag": "Website"
+    },
+    {
+      "count": 29,
+      "slug": "system-setting",
+      "tag": "System Setting"
+    },
+    {
+      "count": 23,
+      "slug": "app",
+      "tag": "App"
+    },
+    {
+      "count": 17,
+      "slug": "backup-account",
+      "tag": "Backup Account"
+    },
+    {
+      "count": 16,
+      "slug": "container",
+      "tag": "Container"
+    },
+    {
+      "count": 14,
+      "slug": "database-mysql",
+      "tag": "Database Mysql"
+    },
+    {
+      "count": 13,
+      "slug": "clam",
+      "tag": "Clam"
+    },
+    {
+      "count": 11,
+      "slug": "device",
+      "tag": "Device"
+    },
+    {
+      "count": 10,
+      "slug": "ai",
+      "tag": "AI"
+    },
+    {
+      "count": 10,
+      "slug": "container-image",
+      "tag": "Container Image"
+    },
+    {
+      "count": 10,
+      "slug": "cronjob",
+      "tag": "Cronjob"
+    },
+    {
+      "count": 10,
+      "slug": "firewall",
+      "tag": "Firewall"
+    },
+    {
+      "count": 10,
+      "slug": "website-ssl",
+      "tag": "Website SSL"
+    },
+    {
+      "count": 9,
+      "slug": "database",
+      "tag": "Database"
+    },
+    {
+      "count": 9,
+      "slug": "database-postgresql",
+      "tag": "Database Postgresql"
+    },
+    {
+      "count": 9,
+      "slug": "runtime",
+      "tag": "Runtime"
+    },
+    {
+      "count": 8,
+      "slug": "container-docker",
+      "tag": "Container Docker"
+    },
+    {
+      "count": 8,
+      "slug": "ftp",
+      "tag": "FTP"
+    },
+    {
+      "count": 8,
+      "slug": "host",
+      "tag": "Host"
+    },
+    {
+      "count": 8,
+      "slug": "host-tool",
+      "tag": "Host tool"
+    },
+    {
+      "count": 8,
+      "slug": "ssh",
+      "tag": "SSH"
+    },
+    {
+      "count": 7,
+      "slug": "auth",
+      "tag": "Auth"
+    },
+    {
+      "count": 7,
+      "slug": "database-redis",
+      "tag": "Database Redis"
+    },
+    {
+      "count": 7,
+      "slug": "fail2ban",
+      "tag": "Fail2ban"
+    },
+    {
+      "count": 7,
+      "slug": "website-ca",
+      "tag": "Website CA"
+    },
+    {
+      "count": 6,
+      "slug": "command",
+      "tag": "Command"
+    },
+    {
+      "count": 6,
+      "slug": "container-compose",
+      "tag": "Container Compose"
+    },
+    {
+      "count": 6,
+      "slug": "container-image-repo",
+      "tag": "Container Image-repo"
+    },
+    {
+      "count": 6,
+      "slug": "openresty",
+      "tag": "OpenResty"
+    },
+    {
+      "count": 5,
+      "slug": "container-compose-template",
+      "tag": "Container Compose-template"
+    },
+    {
+      "count": 5,
+      "slug": "logs",
+      "tag": "Logs"
+    },
+    {
+      "count": 4,
+      "slug": "container-network",
+      "tag": "Container Network"
+    },
+    {
+      "count": 4,
+      "slug": "container-volume",
+      "tag": "Container Volume"
+    },
+    {
+      "count": 4,
+      "slug": "dashboard",
+      "tag": "Dashboard"
+    },
+    {
+      "count": 4,
+      "slug": "php-extensions",
+      "tag": "PHP Extensions"
+    },
+    {
+      "count": 4,
+      "slug": "redis-command",
+      "tag": "Redis Command"
+    },
+    {
+      "count": 4,
+      "slug": "system-group",
+      "tag": "System Group"
+    },
+    {
+      "count": 4,
+      "slug": "website-dns",
+      "tag": "Website DNS"
+    },
+    {
+      "count": 4,
+      "slug": "website-nginx",
+      "tag": "Website Nginx"
+    },
+    {
+      "count": 3,
+      "slug": "database-common",
+      "tag": "Database Common"
+    },
+    {
+      "count": 3,
+      "slug": "website-acme",
+      "tag": "Website Acme"
+    },
+    {
+      "count": 3,
+      "slug": "website-domain",
+      "tag": "Website Domain"
+    },
+    {
+      "count": 3,
+      "slug": "website-php",
+      "tag": "Website PHP"
+    },
+    {
+      "count": 2,
+      "slug": "untagged",
+      "tag": "(untagged)"
+    },
+    {
+      "count": 2,
+      "slug": "monitor",
+      "tag": "Monitor"
+    },
+    {
+      "count": 2,
+      "slug": "website-https",
+      "tag": "Website HTTPS"
+    },
+    {
+      "count": 1,
+      "slug": "process",
+      "tag": "Process"
+    }
+  ]
+}

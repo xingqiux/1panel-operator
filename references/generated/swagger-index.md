@@ -1,0 +1,2638 @@
+# 1Panel Swagger API Index
+
+Generated from `<configured-base-url>/1panel/swagger/doc.json` on 2026-03-26T04:27:13.718255+00:00
+
+## Tag: File
+
+- **`POST` /files** — Create file
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/batch/check** — Batch check file exist
+  - Tags: File
+  - Body schemas: `#/definitions/request.FilePathsCheck`
+  - Responses: `200` → `#/definitions/response.ExistFileInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/batch/del** — Batch delete file
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileBatchDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/batch/role** — Batch change file mode and owner
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileRoleReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/check** — Check file exist
+  - Tags: File
+  - Body schemas: `#/definitions/request.FilePathCheck`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/chunkdownload** — Chunk Download file
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileDownload`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/chunkupload** — Chunk upload file
+  - Tags: File
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/compress** — Compress file
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileCompress`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/content** — Load file content
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileContentReq`
+  - Responses: `200` → `#/definitions/response.FileInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/decompress** — Decompress file
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileDeCompress`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/del** — Delete file
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /files/download** — Download file
+  - Tags: File
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/favorite** — Create favorite
+  - Tags: File
+  - Body schemas: `#/definitions/request.FavoriteCreate`
+  - Responses: `200` → `#/definitions/model.Favorite`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/favorite/del** — Delete favorite
+  - Tags: File
+  - Body schemas: `#/definitions/request.FavoriteDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/favorite/search** — List favorites
+  - Tags: File
+  - Body schemas: `#/definitions/dto.PageInfo`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/mode** — Change file mode
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/move** — Move file
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileMove`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/owner** — Change file owner
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileRoleUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/read** — Read file by Line
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileReadByLineReq`
+  - Responses: `200` → `#/definitions/response.FileLineContent`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/recycle/clear** — Clear Recycle Bin files
+  - Tags: File
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/recycle/reduce** — Reduce Recycle Bin files
+  - Tags: File
+  - Body schemas: `#/definitions/request.RecycleBinReduce`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/recycle/search** — List Recycle Bin files
+  - Tags: File
+  - Body schemas: `#/definitions/dto.PageInfo`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`GET` /files/recycle/status** — Get Recycle Bin status
+  - Tags: File
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/rename** — Change file name
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileRename`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/save** — Update file content
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileEdit`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/search** — List files
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileOption`
+  - Responses: `200` → `#/definitions/response.FileInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/size** — Load file size
+  - Tags: File
+  - Body schemas: `#/definitions/request.DirSizeReq`
+  - Responses: `200` → `#/definitions/response.DirSizeRes`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/tree** — Load files tree
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileOption`
+  - Responses: `200` → `#/definitions/response.FileTree`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/upload** — Upload file
+  - Tags: File
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/upload/search** — Page file
+  - Tags: File
+  - Body schemas: `#/definitions/request.SearchUploadWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /files/wget** — Wget file
+  - Tags: File
+  - Body schemas: `#/definitions/request.FileWget`
+  - Responses: `200` → `#/definitions/response.FileWgetRes`
+  - Path params: None
+  - Query params: None
+
+## Tag: Website
+
+- **`POST` /runtimes/del** — Delete runtime
+  - Tags: Website
+  - Body schemas: `#/definitions/request.RuntimeDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites** — Create website
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/auths** — Get AuthBasic conf
+  - Tags: Website
+  - Body schemas: `#/definitions/request.NginxAuthReq`
+  - Responses: `200` → `#/definitions/response.NginxAuthRes`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/auths/update** — Get AuthBasic conf
+  - Tags: Website
+  - Body schemas: `#/definitions/request.NginxAuthUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/check** — Check before create website
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteInstallCheckReq`
+  - Responses: `200` → `#/definitions/response.WebsitePreInstallCheck`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/default/html/update** — Update default html
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteHtmlUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /websites/default/html/{type}** — Get default html
+  - Tags: Website
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.WebsiteHtmlRes`
+  - Path params: type
+  - Query params: None
+- **`POST` /websites/default/server** — Change default server
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteDefaultUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/del** — Delete website
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/dir** — Get website dir
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteCommonReq`
+  - Responses: `200` → `#/definitions/response.WebsiteDirConfig`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/dir/permission** — Update Site Dir permission
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteUpdateDirPermission`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/dir/update** — Update Site Dir
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteUpdateDir`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/leech** — Get AntiLeech conf
+  - Tags: Website
+  - Body schemas: `#/definitions/request.NginxCommonReq`
+  - Responses: `200` → `#/definitions/response.NginxAntiLeechRes`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/leech/update** — Update AntiLeech conf
+  - Tags: Website
+  - Body schemas: `#/definitions/request.NginxAntiLeechUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /websites/list** — List websites
+  - Tags: Website
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.WebsiteDTO`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/log** — Operate website log
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteLogReq`
+  - Responses: `200` → `#/definitions/response.WebsiteLog`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/operate** — Operate website
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteOp`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /websites/options** — List website names
+  - Tags: Website
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.WebsiteOption`
+  - Path params: None
+  - Query params: None
+- **`GET` /websites/php/config/{id}** — Load website php conf
+  - Tags: Website
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.PHPConfig`
+  - Path params: id
+  - Query params: None
+- **`POST` /websites/proxies** — Get proxy conf
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteProxyReq`
+  - Responses: `200` → `#/definitions/request.WebsiteProxyConfig`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/proxies/del** — Delete proxy conf
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteProxyDel`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/proxies/update** — Update proxy conf
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteProxyConfig`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/proxy/file** — Update proxy file
+  - Tags: Website
+  - Body schemas: `#/definitions/request.NginxProxyUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/redirect** — Get redirect conf
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteProxyReq`
+  - Responses: `200` → `#/definitions/response.NginxRedirectConfig`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/redirect/file** — Update redirect file
+  - Tags: Website
+  - Body schemas: `#/definitions/request.NginxRedirectUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/redirect/update** — Update redirect conf
+  - Tags: Website
+  - Body schemas: `#/definitions/request.NginxRedirectReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/rewrite** — Get rewrite conf
+  - Tags: Website
+  - Body schemas: `#/definitions/request.NginxRewriteReq`
+  - Responses: `200` → `#/definitions/response.NginxRewriteRes`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/rewrite/update** — Update rewrite conf
+  - Tags: Website
+  - Body schemas: `#/definitions/request.NginxRewriteUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/search** — Page websites
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteSearch`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/update** — Update website
+  - Tags: Website
+  - Body schemas: `#/definitions/request.WebsiteUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /websites/{id}** — Search website by id
+  - Tags: Website
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.WebsiteDTO`
+  - Path params: id
+  - Query params: None
+
+## Tag: System Setting
+
+- **`POST` /settings/api/config/generate/key** — Generate api key
+  - Tags: System Setting
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/api/config/update** — Update api config
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.ApiInterfaceConfig`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /settings/basedir** — Load local base dir
+  - Tags: System Setting
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/bind/update** — Update system bind info
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.BindInfo`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/expired/handle** — Reset system password expired
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.PasswordUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /settings/interface** — Load system address
+  - Tags: System Setting
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/menu/update** — Update system setting
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.SettingUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/mfa** — Load mfa info
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.MfaCredential`
+  - Responses: `200` → `#/definitions/mfa.Otp`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/mfa/bind** — Bind mfa
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.MfaCredential`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/password/update** — Update system password
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.PasswordUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/port/update** — Update system port
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.PortUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/proxy/update** — Update proxy setting
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.ProxyUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/search** — Load system setting info
+  - Tags: System Setting
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.SettingInfo`
+  - Path params: None
+  - Query params: None
+- **`GET` /settings/search/available** — Load system available status
+  - Tags: System Setting
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/snapshot** — Create system snapshot
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.SnapshotCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/snapshot/del** — Delete system backup
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.SnapshotBatchDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/snapshot/description/update** — Update snapshot description
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.UpdateDescription`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/snapshot/import** — Import system snapshot
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.SnapshotImport`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/snapshot/recover** — Recover system backup
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.SnapshotRecover`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/snapshot/rollback** — Rollback system backup
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.SnapshotRecover`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/snapshot/search** — Page system snapshot
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.PageSnapshot`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/snapshot/size** — Load system snapshot size
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.PageSnapshot`
+  - Responses: `200` → `#/definitions/dto.SnapshotFile`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/snapshot/status** — Load Snapshot status
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.OperateByID`
+  - Responses: `200` → `#/definitions/dto.SnapshotStatus`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/ssl/download** — Download system cert
+  - Tags: System Setting
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /settings/ssl/info** — Load system cert info
+  - Tags: System Setting
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.SSLInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/ssl/update** — Update system ssl
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.SSLUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/update** — Update system setting
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.SettingUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /settings/upgrade** — Load release notes by version
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.Upgrade`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/upgrade** — Upgrade
+  - Tags: System Setting
+  - Body schemas: `#/definitions/dto.Upgrade`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: App
+
+- **`GET` /apps/checkupdate** — Get app list update
+  - Tags: App
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.AppUpdateRes`
+  - Path params: None
+  - Query params: None
+- **`GET` /apps/detail/{appId}/{version}/{type}** — Search app detail by appid
+  - Tags: App
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.AppDetailDTO`
+  - Path params: appId, version, type
+  - Query params: None
+- **`GET` /apps/details/{id}** — Get app detail by id
+  - Tags: App
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.AppDetailDTO`
+  - Path params: id
+  - Query params: None
+- **`GET` /apps/ignored** — Get Ignore App
+  - Tags: App
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.IgnoredApp`
+  - Path params: None
+  - Query params: None
+- **`POST` /apps/install** — Install app
+  - Tags: App
+  - Body schemas: `#/definitions/request.AppInstallCreate`
+  - Responses: `200` → `#/definitions/model.AppInstall`
+  - Path params: None
+  - Query params: None
+- **`POST` /apps/installed/check** — Check app installed
+  - Tags: App
+  - Body schemas: `#/definitions/request.AppInstalledInfo`
+  - Responses: `200` → `#/definitions/response.AppInstalledCheck`
+  - Path params: None
+  - Query params: None
+- **`POST` /apps/installed/conf** — Search default config by key
+  - Tags: App
+  - Body schemas: `#/definitions/dto.OperationWithNameAndType`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /apps/installed/conninfo/{key}** — Search app password by key
+  - Tags: App
+  - Body schemas: `#/definitions/dto.OperationWithNameAndType`
+  - Responses: `200` → `#/definitions/response.DatabaseConn`
+  - Path params: key
+  - Query params: None
+- **`GET` /apps/installed/delete/check/{appInstallId}** — Check before delete
+  - Tags: App
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.AppResource`
+  - Path params: appInstallId
+  - Query params: None
+- **`POST` /apps/installed/ignore** — ignore App Update
+  - Tags: App
+  - Body schemas: `#/definitions/request.AppInstalledIgnoreUpgrade`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /apps/installed/list** — List app installed
+  - Tags: App
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.AppInstallInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /apps/installed/loadport** — Search app port by key
+  - Tags: App
+  - Body schemas: `#/definitions/dto.OperationWithNameAndType`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /apps/installed/op** — Operate installed app
+  - Tags: App
+  - Body schemas: `#/definitions/request.AppInstalledOperate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /apps/installed/params/update** — Change app params
+  - Tags: App
+  - Body schemas: `#/definitions/request.AppInstalledUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /apps/installed/params/{appInstallId}** — Search params by appInstallId
+  - Tags: App
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.AppConfig`
+  - Path params: appInstallId
+  - Query params: None
+- **`POST` /apps/installed/port/change** — Change app port
+  - Tags: App
+  - Body schemas: `#/definitions/request.PortUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /apps/installed/search** — Page app installed
+  - Tags: App
+  - Body schemas: `#/definitions/request.AppInstalledSearch`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /apps/installed/sync** — Sync app installed
+  - Tags: App
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /apps/installed/update/versions** — Search app update version by install id
+  - Tags: App
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.AppVersion`
+  - Path params: None
+  - Query params: None
+- **`POST` /apps/search** — List apps
+  - Tags: App
+  - Body schemas: `#/definitions/request.AppSearch`
+  - Responses: `200` → `#/definitions/response.AppRes`
+  - Path params: None
+  - Query params: None
+- **`GET` /apps/services/{key}** — Search app service by key
+  - Tags: App
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.AppService`
+  - Path params: key
+  - Query params: None
+- **`POST` /apps/sync** — Sync app list
+  - Tags: App
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /apps/{key}** — Search app by key
+  - Tags: App
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.AppDTO`
+  - Path params: key
+  - Query params: None
+
+## Tag: Backup Account
+
+- **`POST` /settings/backup** — Create backup account
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.BackupOperate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/backup** — Backup system data
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.CommonBackup`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/del** — Delete backup account
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.OperateByID`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /settings/backup/onedrive** — Load OneDrive info
+  - Tags: Backup Account
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.OneDriveInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/record/del** — Delete backup record
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.BatchDeleteReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/record/download** — Download backup record
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.DownloadRecord`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/record/search** — Page backup records
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.RecordSearch`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/record/search/bycronjob** — Page backup records by cronjob
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.RecordSearchByCronjob`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/record/size** — Load backup records size
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.RecordSearch`
+  - Responses: `200` → `#/definitions/dto.BackupFile`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/record/size/bycronjob** — Load backup records size for cronjob
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.RecordSearchByCronjob`
+  - Responses: `200` → `#/definitions/dto.BackupFile`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/recover** — Recover system data
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.CommonRecover`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/recover/byupload** — Recover system data by upload
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.CommonRecover`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/refresh/onedrive** — Refresh OneDrive token
+  - Tags: Backup Account
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /settings/backup/search** — List backup accounts
+  - Tags: Backup Account
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.BackupInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/search** — List buckets
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.ForBuckets`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/search/files** — List files from backup accounts
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.BackupSearchFile`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /settings/backup/update** — Update backup account
+  - Tags: Backup Account
+  - Body schemas: `#/definitions/dto.BackupOperate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Container
+
+- **`POST` /containers** — Create container
+  - Tags: Container
+  - Body schemas: `#/definitions/dto.ContainerOperate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/clean/log** — Clean container log
+  - Tags: Container
+  - Body schemas: `#/definitions/dto.OperationWithName`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/commit** — Commit Container
+  - Tags: Container
+  - Body schemas: `#/definitions/dto.ContainerCommit`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/download/log** — Download Container logs
+  - Tags: Container
+  - Body schemas: `#/definitions/dto.ContainerLog`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/info** — Load container info
+  - Tags: Container
+  - Body schemas: `#/definitions/dto.OperationWithName`
+  - Responses: `200` → `#/definitions/dto.ContainerOperate`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/inspect** — Container inspect
+  - Tags: Container
+  - Body schemas: `#/definitions/dto.InspectReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/list** — List containers
+  - Tags: Container
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/load/log** — Load container log
+  - Tags: Container
+  - Body schemas: `#/definitions/dto.OperationWithNameAndType`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/operate** — Operate Container
+  - Tags: Container
+  - Body schemas: `#/definitions/dto.ContainerOperation`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/prune** — Clean container
+  - Tags: Container
+  - Body schemas: `#/definitions/dto.ContainerPrune`
+  - Responses: `200` → `#/definitions/dto.ContainerPruneReport`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/rename** — Rename Container
+  - Tags: Container
+  - Body schemas: `#/definitions/dto.ContainerRename`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/search** — Page containers
+  - Tags: Container
+  - Body schemas: `#/definitions/dto.PageContainer`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/search/log** — Container logs
+  - Tags: Container
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: container, since, follow, tail
+- **`GET` /containers/stats/{id}** — Container stats
+  - Tags: Container
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.ContainerStats`
+  - Path params: id
+  - Query params: None
+- **`POST` /containers/update** — Update container
+  - Tags: Container
+  - Body schemas: `#/definitions/dto.ContainerOperate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/upgrade** — Upgrade container
+  - Tags: Container
+  - Body schemas: `#/definitions/dto.ContainerUpgrade`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Database Mysql
+
+- **`POST` /databases** — Create mysql database
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.MysqlDBCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/bind** — Bind user of mysql database
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.BindUser`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/change/access** — Change mysql access
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.ChangeDBInfo`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/change/password** — Change mysql password
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.ChangeDBInfo`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/del** — Delete mysql database
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.MysqlDBDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/del/check** — Check before delete mysql database
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.MysqlDBDeleteCheck`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/description/update** — Update mysql database description
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.UpdateDescription`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/load** — Load mysql database from remote
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.MysqlLoadDB`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /databases/options** — List mysql database names
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.PageInfo`
+  - Responses: `200` → `#/definitions/dto.MysqlOption`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/remote** — Load mysql remote access
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.OperationWithNameAndType`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/search** — Page mysql databases
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.MysqlDBSearch`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/status** — Load mysql status info
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.OperationWithNameAndType`
+  - Responses: `200` → `#/definitions/dto.MysqlStatus`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/variables** — Load mysql variables info
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.OperationWithNameAndType`
+  - Responses: `200` → `#/definitions/dto.MysqlVariables`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/variables/update** — Update mysql variables
+  - Tags: Database Mysql
+  - Body schemas: `#/definitions/dto.MysqlVariablesUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Clam
+
+- **`POST` /toolbox/clam** — Create clam
+  - Tags: Clam
+  - Body schemas: `#/definitions/dto.ClamCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /toolbox/clam/base** — Load clam base info
+  - Tags: Clam
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.ClamBaseInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/clam/del** — Delete clam
+  - Tags: Clam
+  - Body schemas: `#/definitions/dto.ClamDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/clam/file/search** — Load clam file
+  - Tags: Clam
+  - Body schemas: `#/definitions/dto.ClamFileReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/clam/file/update** — Update clam file
+  - Tags: Clam
+  - Body schemas: `#/definitions/dto.UpdateByNameAndFile`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/clam/handle** — Handle clam scan
+  - Tags: Clam
+  - Body schemas: `#/definitions/dto.OperateByID`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/clam/operate** — Operate Clam
+  - Tags: Clam
+  - Body schemas: `#/definitions/dto.Operate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/clam/record/clean** — Clean clam record
+  - Tags: Clam
+  - Body schemas: `#/definitions/dto.OperateByID`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/clam/record/log** — Load clam record detail
+  - Tags: Clam
+  - Body schemas: `#/definitions/dto.ClamLogReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/clam/record/search** — Page clam record
+  - Tags: Clam
+  - Body schemas: `#/definitions/dto.ClamLogSearch`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/clam/search** — Page clam
+  - Tags: Clam
+  - Body schemas: `#/definitions/dto.SearchClamWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/clam/status/update** — Update clam status
+  - Tags: Clam
+  - Body schemas: `#/definitions/dto.ClamUpdateStatus`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/clam/update** — Update clam
+  - Tags: Clam
+  - Body schemas: `#/definitions/dto.ClamUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Device
+
+- **`POST` /toolbox/clean** — Clean system
+  - Tags: Device
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/device/base** — Load device base info
+  - Tags: Device
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.DeviceBaseInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/device/check/dns** — Check device DNS conf
+  - Tags: Device
+  - Body schemas: `#/definitions/dto.SettingUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/device/conf** — load conf
+  - Tags: Device
+  - Body schemas: `#/definitions/dto.OperationWithName`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/device/update/byconf** — Update device conf by file
+  - Tags: Device
+  - Body schemas: `#/definitions/dto.UpdateByNameAndFile`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/device/update/conf** — Update device
+  - Tags: Device
+  - Body schemas: `#/definitions/dto.SettingUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/device/update/host** — Update device hosts
+  - Tags: Device
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/device/update/passwd** — Update device passwd
+  - Tags: Device
+  - Body schemas: `#/definitions/dto.ChangePasswd`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/device/update/swap** — Update device swap
+  - Tags: Device
+  - Body schemas: `#/definitions/dto.SwapHelper`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /toolbox/device/zone/options** — list time zone options
+  - Tags: Device
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/scan** — Scan system
+  - Tags: Device
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.CleanData`
+  - Path params: None
+  - Query params: None
+
+## Tag: AI
+
+- **`POST` /ai/domain/bind** — Bind domain
+  - Tags: AI
+  - Body schemas: `#/definitions/dto.OllamaBindDomain`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /ai/domain/get** — Get bind domain
+  - Tags: AI
+  - Body schemas: `#/definitions/dto.OllamaBindDomainReq`
+  - Responses: `200` → `#/definitions/dto.OllamaBindDomainRes`
+  - Path params: None
+  - Query params: None
+- **`GET` /ai/gpu/load** — Load gpu / xpu info
+  - Tags: AI
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /ai/ollama/model** — Create Ollama model
+  - Tags: AI
+  - Body schemas: `#/definitions/dto.OllamaModelName`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /ai/ollama/model/close** — Close Ollama model conn
+  - Tags: AI
+  - Body schemas: `#/definitions/dto.OllamaModelName`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /ai/ollama/model/del** — Delete Ollama model
+  - Tags: AI
+  - Body schemas: `#/definitions/dto.ForceDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /ai/ollama/model/load** — Page Ollama models
+  - Tags: AI
+  - Body schemas: `#/definitions/dto.OllamaModelName`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /ai/ollama/model/recreate** — Rereate Ollama model
+  - Tags: AI
+  - Body schemas: `#/definitions/dto.OllamaModelName`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /ai/ollama/model/search** — Page Ollama models
+  - Tags: AI
+  - Body schemas: `#/definitions/dto.SearchWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /ai/ollama/model/sync** — Sync Ollama model list
+  - Tags: AI
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.OllamaModelDropList`
+  - Path params: None
+  - Query params: None
+
+## Tag: Container Image
+
+- **`GET` /containers/image** — load images options
+  - Tags: Container Image
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.Options`
+  - Path params: None
+  - Query params: None
+- **`GET` /containers/image/all** — List all images
+  - Tags: Container Image
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.ImageInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/image/build** — Build image
+  - Tags: Container Image
+  - Body schemas: `#/definitions/dto.ImageBuild`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/image/load** — Load image
+  - Tags: Container Image
+  - Body schemas: `#/definitions/dto.ImageLoad`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/image/pull** — Pull image
+  - Tags: Container Image
+  - Body schemas: `#/definitions/dto.ImagePull`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/image/push** — Push image
+  - Tags: Container Image
+  - Body schemas: `#/definitions/dto.ImagePush`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/image/remove** — Delete image
+  - Tags: Container Image
+  - Body schemas: `#/definitions/dto.BatchDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/image/save** — Save image
+  - Tags: Container Image
+  - Body schemas: `#/definitions/dto.ImageSave`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/image/search** — Page images
+  - Tags: Container Image
+  - Body schemas: `#/definitions/dto.SearchWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/image/tag** — Tag image
+  - Tags: Container Image
+  - Body schemas: `#/definitions/dto.ImageTag`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Cronjob
+
+- **`POST` /cronjobs** — Create cronjob
+  - Tags: Cronjob
+  - Body schemas: `#/definitions/dto.CronjobCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /cronjobs/del** — Delete cronjob
+  - Tags: Cronjob
+  - Body schemas: `#/definitions/dto.CronjobBatchDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /cronjobs/download** — Download cronjob records
+  - Tags: Cronjob
+  - Body schemas: `#/definitions/dto.CronjobDownload`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /cronjobs/handle** — Handle cronjob once
+  - Tags: Cronjob
+  - Body schemas: `#/definitions/dto.OperateByID`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /cronjobs/records/clean** — Clean job records
+  - Tags: Cronjob
+  - Body schemas: `#/definitions/dto.CronjobClean`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /cronjobs/records/log** — Load Cronjob record log
+  - Tags: Cronjob
+  - Body schemas: `#/definitions/dto.OperateByID`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /cronjobs/search** — Page cronjobs
+  - Tags: Cronjob
+  - Body schemas: `#/definitions/dto.PageCronjob`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /cronjobs/search/records** — Page job records
+  - Tags: Cronjob
+  - Body schemas: `#/definitions/dto.SearchRecord`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /cronjobs/status** — Update cronjob status
+  - Tags: Cronjob
+  - Body schemas: `#/definitions/dto.CronjobUpdateStatus`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /cronjobs/update** — Update cronjob
+  - Tags: Cronjob
+  - Body schemas: `#/definitions/dto.CronjobUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Firewall
+
+- **`GET` /hosts/firewall/base** — Load firewall base info
+  - Tags: Firewall
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.FirewallBaseInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/firewall/batch** — Batch create group
+  - Tags: Firewall
+  - Body schemas: `#/definitions/dto.BatchRuleOperate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/firewall/forward** — Update firewall port group
+  - Tags: Firewall
+  - Body schemas: `#/definitions/dto.ForwardRuleOperate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/firewall/ip** — Create firewall group
+  - Tags: Firewall
+  - Body schemas: `#/definitions/dto.AddrRuleOperate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/firewall/operate** — Page firewall status
+  - Tags: Firewall
+  - Body schemas: `#/definitions/dto.FirewallOperation`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/firewall/port** — Create firewall port group
+  - Tags: Firewall
+  - Body schemas: `#/definitions/dto.PortRuleOperate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/firewall/search** — Page firewall rules
+  - Tags: Firewall
+  - Body schemas: `#/definitions/dto.RuleSearch`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/firewall/update/addr** — Update address group
+  - Tags: Firewall
+  - Body schemas: `#/definitions/dto.AddrRuleUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/firewall/update/description** — Update rule description
+  - Tags: Firewall
+  - Body schemas: `#/definitions/dto.UpdateFirewallDescription`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/firewall/update/port** — Update firewall group
+  - Tags: Firewall
+  - Body schemas: `#/definitions/dto.PortRuleUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Website SSL
+
+- **`POST` /websites/ssl** — Create website ssl
+  - Tags: Website SSL
+  - Body schemas: `#/definitions/request.WebsiteSSLCreate`
+  - Responses: `200` → `#/definitions/request.WebsiteSSLCreate`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/ssl/del** — Delete website ssl
+  - Tags: Website SSL
+  - Body schemas: `#/definitions/request.WebsiteBatchDelReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/ssl/download** — Download SSL file
+  - Tags: Website SSL
+  - Body schemas: `#/definitions/request.WebsiteResourceReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/ssl/obtain** — Apply  ssl
+  - Tags: Website SSL
+  - Body schemas: `#/definitions/request.WebsiteSSLApply`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/ssl/resolve** — Resolve website ssl
+  - Tags: Website SSL
+  - Body schemas: `#/definitions/request.WebsiteDNSReq`
+  - Responses: `200` → `#/definitions/response.WebsiteDNSRes`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/ssl/search** — Page website ssl
+  - Tags: Website SSL
+  - Body schemas: `#/definitions/request.WebsiteSSLSearch`
+  - Responses: `200` → `#/definitions/response.WebsiteSSLDTO`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/ssl/update** — Update Website ssl
+  - Tags: Website SSL
+  - Body schemas: `#/definitions/request.WebsiteSSLUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/ssl/upload** — Upload Website ssl
+  - Tags: Website SSL
+  - Body schemas: `#/definitions/request.WebsiteSSLUpload`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /websites/ssl/website/{websiteId}** — Search website ssl by website id
+  - Tags: Website SSL
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.WebsiteSSLDTO`
+  - Path params: websiteId
+  - Query params: None
+- **`GET` /websites/ssl/{id}** — Search website ssl by id
+  - Tags: Website SSL
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.WebsiteSSLDTO`
+  - Path params: id
+  - Query params: None
+
+## Tag: Database
+
+- **`POST` /databases/db** — Create database
+  - Tags: Database
+  - Body schemas: `#/definitions/dto.DatabaseCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/db/check** — Check database
+  - Tags: Database
+  - Body schemas: `#/definitions/dto.DatabaseCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/db/del** — Delete database
+  - Tags: Database
+  - Body schemas: `#/definitions/dto.DatabaseDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /databases/db/item/{type}** — Retrieve database list based on type
+  - Tags: Database
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.DatabaseItem`
+  - Path params: type
+  - Query params: None
+- **`GET` /databases/db/list/{type}** — List databases
+  - Tags: Database
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.DatabaseOption`
+  - Path params: type
+  - Query params: None
+- **`POST` /databases/db/search** — Page databases
+  - Tags: Database
+  - Body schemas: `#/definitions/dto.DatabaseSearch`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/db/update** — Update database
+  - Tags: Database
+  - Body schemas: `#/definitions/dto.DatabaseUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /databases/db/{name}** — Get databases
+  - Tags: Database
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.DatabaseInfo`
+  - Path params: name
+  - Query params: None
+- **`POST` /db/remote/del/check** — Check before delete remote database
+  - Tags: Database
+  - Body schemas: `#/definitions/dto.OperateByID`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Database Postgresql
+
+- **`POST` /databases/pg** — Create postgresql database
+  - Tags: Database Postgresql
+  - Body schemas: `#/definitions/dto.PostgresqlDBCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/pg/bind** — Bind postgresql user
+  - Tags: Database Postgresql
+  - Body schemas: `#/definitions/dto.PostgresqlBindUser`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/pg/del** — Delete postgresql database
+  - Tags: Database Postgresql
+  - Body schemas: `#/definitions/dto.PostgresqlDBDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/pg/del/check** — Check before delete postgresql database
+  - Tags: Database Postgresql
+  - Body schemas: `#/definitions/dto.PostgresqlDBDeleteCheck`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/pg/description** — Update postgresql database description
+  - Tags: Database Postgresql
+  - Body schemas: `#/definitions/dto.UpdateDescription`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/pg/password** — Change postgresql password
+  - Tags: Database Postgresql
+  - Body schemas: `#/definitions/dto.ChangeDBInfo`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/pg/privileges** — Change postgresql privileges
+  - Tags: Database Postgresql
+  - Body schemas: `#/definitions/dto.ChangeDBInfo`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/pg/search** — Page postgresql databases
+  - Tags: Database Postgresql
+  - Body schemas: `#/definitions/dto.PostgresqlDBSearch`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/pg/{database}/load** — Load postgresql database from remote
+  - Tags: Database Postgresql
+  - Body schemas: `#/definitions/dto.PostgresqlLoadDB`
+  - Responses: `200` → `None`
+  - Path params: database
+  - Query params: None
+
+## Tag: Runtime
+
+- **`POST` /runtimes** — Create runtime
+  - Tags: Runtime
+  - Body schemas: `#/definitions/request.RuntimeCreate`
+  - Responses: `200` → `#/definitions/model.Runtime`
+  - Path params: None
+  - Query params: None
+- **`POST` /runtimes/node/modules** — Get Node modules
+  - Tags: Runtime
+  - Body schemas: `#/definitions/request.NodeModuleReq`
+  - Responses: `200` → `#/definitions/response.NodeModule`
+  - Path params: None
+  - Query params: None
+- **`POST` /runtimes/node/modules/operate** — Operate Node modules
+  - Tags: Runtime
+  - Body schemas: `#/definitions/request.NodeModuleReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /runtimes/node/package** — Get Node package scripts
+  - Tags: Runtime
+  - Body schemas: `#/definitions/request.NodePackageReq`
+  - Responses: `200` → `#/definitions/response.PackageScripts`
+  - Path params: None
+  - Query params: None
+- **`POST` /runtimes/operate** — Operate runtime
+  - Tags: Runtime
+  - Body schemas: `#/definitions/request.RuntimeOperate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /runtimes/search** — List runtimes
+  - Tags: Runtime
+  - Body schemas: `#/definitions/request.RuntimeSearch`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /runtimes/sync** — Sync runtime status
+  - Tags: Runtime
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /runtimes/update** — Update runtime
+  - Tags: Runtime
+  - Body schemas: `#/definitions/request.RuntimeUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /runtimes/{id}** — Get runtime
+  - Tags: Runtime
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.RuntimeDTO`
+  - Path params: id
+  - Query params: None
+
+## Tag: Container Docker
+
+- **`GET` /containers/daemonjson** — Load docker daemon.json
+  - Tags: Container Docker
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.DaemonJsonConf`
+  - Path params: None
+  - Query params: None
+- **`GET` /containers/daemonjson/file** — Load docker daemon.json
+  - Tags: Container Docker
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/daemonjson/update** — Update docker daemon.json
+  - Tags: Container Docker
+  - Body schemas: `#/definitions/dto.SettingUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/daemonjson/update/byfile** — Update docker daemon.json by upload file
+  - Tags: Container Docker
+  - Body schemas: `#/definitions/dto.DaemonJsonUpdateByFile`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/docker/operate** — Operate docker
+  - Tags: Container Docker
+  - Body schemas: `#/definitions/dto.DockerOperation`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /containers/docker/status** — Load docker status
+  - Tags: Container Docker
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/ipv6option/update** — Update docker daemon.json ipv6 option
+  - Tags: Container Docker
+  - Body schemas: `#/definitions/dto.LogOption`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/logoption/update** — Update docker daemon.json log option
+  - Tags: Container Docker
+  - Body schemas: `#/definitions/dto.LogOption`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: FTP
+
+- **`POST` /toolbox/ftp** — Create FTP user
+  - Tags: FTP
+  - Body schemas: `#/definitions/dto.FtpCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /toolbox/ftp/base** — Load FTP base info
+  - Tags: FTP
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.FtpBaseInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/ftp/del** — Delete FTP user
+  - Tags: FTP
+  - Body schemas: `#/definitions/dto.BatchDeleteReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/ftp/log/search** — Load FTP operation log
+  - Tags: FTP
+  - Body schemas: `#/definitions/dto.FtpLogSearch`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/ftp/operate** — Operate FTP
+  - Tags: FTP
+  - Body schemas: `#/definitions/dto.Operate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/ftp/search** — Page FTP user
+  - Tags: FTP
+  - Body schemas: `#/definitions/dto.SearchWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/ftp/sync** — Sync FTP user
+  - Tags: FTP
+  - Body schemas: `#/definitions/dto.BatchDeleteReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/ftp/update** — Update FTP user
+  - Tags: FTP
+  - Body schemas: `#/definitions/dto.FtpUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Host
+
+- **`POST` /hosts** — Create host
+  - Tags: Host
+  - Body schemas: `#/definitions/dto.HostOperate`
+  - Responses: `200` → `#/definitions/dto.HostInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/del** — Delete host
+  - Tags: Host
+  - Body schemas: `#/definitions/dto.BatchDeleteReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/search** — Page host
+  - Tags: Host
+  - Body schemas: `#/definitions/dto.SearchHostWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/test/byid/{id}** — Test host conn by host id
+  - Tags: Host
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: id
+  - Query params: None
+- **`POST` /hosts/test/byinfo** — Test host conn by info
+  - Tags: Host
+  - Body schemas: `#/definitions/dto.HostConnTest`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/tree** — Load host tree
+  - Tags: Host
+  - Body schemas: `#/definitions/dto.SearchForTree`
+  - Responses: `200` → `#/definitions/dto.HostTree`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/update** — Update host
+  - Tags: Host
+  - Body schemas: `#/definitions/dto.HostOperate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/update/group** — Update host group
+  - Tags: Host
+  - Body schemas: `#/definitions/dto.ChangeHostGroup`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Host tool
+
+- **`POST` /hosts/tool** — Get tool status
+  - Tags: Host tool
+  - Body schemas: `#/definitions/request.HostToolReq`
+  - Responses: `200` → `#/definitions/response.HostToolRes`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/tool/config** — Get tool config
+  - Tags: Host tool
+  - Body schemas: `#/definitions/request.HostToolConfig`
+  - Responses: `200` → `#/definitions/response.HostToolConfig`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/tool/create** — Create Host tool Config
+  - Tags: Host tool
+  - Body schemas: `#/definitions/request.HostToolCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/tool/log** — Get tool logs
+  - Tags: Host tool
+  - Body schemas: `#/definitions/request.HostToolLogReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/tool/operate** — Operate tool
+  - Tags: Host tool
+  - Body schemas: `#/definitions/request.HostToolReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /hosts/tool/supervisor/process** — Get Supervisor process config
+  - Tags: Host tool
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.SupervisorProcessConfig`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/tool/supervisor/process** — Create Supervisor process
+  - Tags: Host tool
+  - Body schemas: `#/definitions/request.SupervisorProcessConfig`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/tool/supervisor/process/file** — Get Supervisor process config
+  - Tags: Host tool
+  - Body schemas: `#/definitions/request.SupervisorProcessFileReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: SSH
+
+- **`POST` /hosts/conffile/update** — Update host SSH setting by file
+  - Tags: SSH
+  - Body schemas: `#/definitions/dto.SSHConf`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /hosts/ssh/conf** — Load host SSH conf
+  - Tags: SSH
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/ssh/generate** — Generate host SSH secret
+  - Tags: SSH
+  - Body schemas: `#/definitions/dto.GenerateSSH`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/ssh/log** — Load host SSH logs
+  - Tags: SSH
+  - Body schemas: `#/definitions/dto.SearchSSHLog`
+  - Responses: `200` → `#/definitions/dto.SSHLog`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/ssh/operate** — Operate SSH
+  - Tags: SSH
+  - Body schemas: `#/definitions/dto.Operate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/ssh/search** — Load host SSH setting info
+  - Tags: SSH
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.SSHInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/ssh/secret** — Load host SSH secret
+  - Tags: SSH
+  - Body schemas: `#/definitions/dto.GenerateLoad`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/ssh/update** — Update host SSH setting
+  - Tags: SSH
+  - Body schemas: `#/definitions/dto.SSHUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Auth
+
+- **`GET` /auth/captcha** — Load captcha
+  - Tags: Auth
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.CaptchaResponse`
+  - Path params: None
+  - Query params: None
+- **`GET` /auth/demo** — Check System isDemo
+  - Tags: Auth
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /auth/intl** — Check System isIntl
+  - Tags: Auth
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /auth/language** — Load System Language
+  - Tags: Auth
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /auth/login** — User login
+  - Tags: Auth
+  - Body schemas: `#/definitions/dto.Login`
+  - Responses: `200` → `#/definitions/dto.UserLoginInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /auth/logout** — User logout
+  - Tags: Auth
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /auth/mfalogin** — User login with mfa
+  - Tags: Auth
+  - Body schemas: `#/definitions/dto.MFALogin`
+  - Responses: `200` → `#/definitions/dto.UserLoginInfo`
+  - Path params: None
+  - Query params: None
+
+## Tag: Database Redis
+
+- **`POST` /databases/redis/conf** — Load redis conf
+  - Tags: Database Redis
+  - Body schemas: `#/definitions/dto.OperationWithName`
+  - Responses: `200` → `#/definitions/dto.RedisConf`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/redis/conf/update** — Update redis conf
+  - Tags: Database Redis
+  - Body schemas: `#/definitions/dto.RedisConfUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/redis/install/cli** — Install redis-cli
+  - Tags: Database Redis
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/redis/password** — Change redis password
+  - Tags: Database Redis
+  - Body schemas: `#/definitions/dto.ChangeRedisPass`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/redis/persistence/conf** — Load redis persistence conf
+  - Tags: Database Redis
+  - Body schemas: `#/definitions/dto.OperationWithName`
+  - Responses: `200` → `#/definitions/dto.RedisPersistence`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/redis/persistence/update** — Update redis persistence conf
+  - Tags: Database Redis
+  - Body schemas: `#/definitions/dto.RedisConfPersistenceUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/redis/status** — Load redis status info
+  - Tags: Database Redis
+  - Body schemas: `#/definitions/dto.OperationWithName`
+  - Responses: `200` → `#/definitions/dto.RedisStatus`
+  - Path params: None
+  - Query params: None
+
+## Tag: Fail2ban
+
+- **`GET` /toolbox/fail2ban/base** — Load fail2ban base info
+  - Tags: Fail2ban
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.Fail2BanBaseInfo`
+  - Path params: None
+  - Query params: None
+- **`GET` /toolbox/fail2ban/load/conf** — Load fail2ban conf
+  - Tags: Fail2ban
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/fail2ban/operate** — Operate fail2ban
+  - Tags: Fail2ban
+  - Body schemas: `#/definitions/dto.Operate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/fail2ban/operate/sshd** — Operate sshd of fail2ban
+  - Tags: Fail2ban
+  - Body schemas: `#/definitions/dto.Operate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/fail2ban/search** — Page fail2ban ip list
+  - Tags: Fail2ban
+  - Body schemas: `#/definitions/dto.Fail2BanSearch`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/fail2ban/update** — Update fail2ban conf
+  - Tags: Fail2ban
+  - Body schemas: `#/definitions/dto.Fail2BanUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /toolbox/fail2ban/update/byconf** — Update fail2ban conf by file
+  - Tags: Fail2ban
+  - Body schemas: `#/definitions/dto.UpdateByFile`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Website CA
+
+- **`POST` /websites/ca** — Create website ca
+  - Tags: Website CA
+  - Body schemas: `#/definitions/request.WebsiteCACreate`
+  - Responses: `200` → `#/definitions/request.WebsiteCACreate`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/ca/del** — Delete website ca
+  - Tags: Website CA
+  - Body schemas: `#/definitions/request.WebsiteCommonReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/ca/download** — Download CA file
+  - Tags: Website CA
+  - Body schemas: `#/definitions/request.WebsiteResourceReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/ca/obtain** — Obtain SSL
+  - Tags: Website CA
+  - Body schemas: `#/definitions/request.WebsiteCAObtain`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/ca/renew** — Renew Obtain SSL
+  - Tags: Website CA
+  - Body schemas: `#/definitions/request.WebsiteCAObtain`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/ca/search** — Page website ca
+  - Tags: Website CA
+  - Body schemas: `#/definitions/request.WebsiteCASearch`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`GET` /websites/ca/{id}** — Get website ca
+  - Tags: Website CA
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.WebsiteCADTO`
+  - Path params: id
+  - Query params: None
+
+## Tag: Command
+
+- **`GET` /hosts/command** — List commands
+  - Tags: Command
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.CommandInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/command** — Create command
+  - Tags: Command
+  - Body schemas: `#/definitions/dto.CommandOperate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/command/del** — Delete command
+  - Tags: Command
+  - Body schemas: `#/definitions/dto.BatchDeleteReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/command/search** — Page commands
+  - Tags: Command
+  - Body schemas: `#/definitions/dto.SearchWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`GET` /hosts/command/tree** — Tree commands
+  - Tags: Command
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.CommandTree`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/command/update** — Update command
+  - Tags: Command
+  - Body schemas: `#/definitions/dto.CommandOperate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Container Compose
+
+- **`POST` /containers/compose** — Create compose
+  - Tags: Container Compose
+  - Body schemas: `#/definitions/dto.ComposeCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/compose/operate** — Operate compose
+  - Tags: Container Compose
+  - Body schemas: `#/definitions/dto.ComposeOperation`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/compose/search** — Page composes
+  - Tags: Container Compose
+  - Body schemas: `#/definitions/dto.SearchWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`GET` /containers/compose/search/log** — Container Compose logs
+  - Tags: Container Compose
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: compose, since, follow, tail
+- **`POST` /containers/compose/test** — Test compose
+  - Tags: Container Compose
+  - Body schemas: `#/definitions/dto.ComposeCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/compose/update** — Update Container Compose
+  - Tags: Container Compose
+  - Body schemas: `#/definitions/dto.ComposeUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Container Image-repo
+
+- **`GET` /containers/repo** — List image repos
+  - Tags: Container Image-repo
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.ImageRepoOption`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/repo** — Create image repo
+  - Tags: Container Image-repo
+  - Body schemas: `#/definitions/dto.ImageRepoDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/repo/del** — Delete image repo
+  - Tags: Container Image-repo
+  - Body schemas: `#/definitions/dto.ImageRepoDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/repo/search** — Page image repos
+  - Tags: Container Image-repo
+  - Body schemas: `#/definitions/dto.SearchWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`GET` /containers/repo/status** — Load repo status
+  - Tags: Container Image-repo
+  - Body schemas: `#/definitions/dto.OperateByID`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/repo/update** — Update image repo
+  - Tags: Container Image-repo
+  - Body schemas: `#/definitions/dto.ImageRepoUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: OpenResty
+
+- **`GET` /openresty** — Load OpenResty conf
+  - Tags: OpenResty
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.NginxFile`
+  - Path params: None
+  - Query params: None
+- **`POST` /openresty/clear** — Clear OpenResty proxy cache
+  - Tags: OpenResty
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /openresty/file** — Update OpenResty conf by upload file
+  - Tags: OpenResty
+  - Body schemas: `#/definitions/request.NginxConfigFileUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /openresty/scope** — Load partial OpenResty conf
+  - Tags: OpenResty
+  - Body schemas: `#/definitions/request.NginxScopeReq`
+  - Responses: `200` → `#/definitions/response.NginxParam`
+  - Path params: None
+  - Query params: None
+- **`GET` /openresty/status** — Load OpenResty status info
+  - Tags: OpenResty
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.NginxStatus`
+  - Path params: None
+  - Query params: None
+- **`POST` /openresty/update** — Update OpenResty conf
+  - Tags: OpenResty
+  - Body schemas: `#/definitions/request.NginxConfigUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Container Compose-template
+
+- **`GET` /containers/template** — List compose templates
+  - Tags: Container Compose-template
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.ComposeTemplateInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/template** — Create compose template
+  - Tags: Container Compose-template
+  - Body schemas: `#/definitions/dto.ComposeTemplateCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/template/del** — Delete compose template
+  - Tags: Container Compose-template
+  - Body schemas: `#/definitions/dto.BatchDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/template/search** — Page compose templates
+  - Tags: Container Compose-template
+  - Body schemas: `#/definitions/dto.SearchWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/template/update** — Update compose template
+  - Tags: Container Compose-template
+  - Body schemas: `#/definitions/dto.ComposeTemplateUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Logs
+
+- **`POST` /logs/clean** — Clean operation logs
+  - Tags: Logs
+  - Body schemas: `#/definitions/dto.CleanLog`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /logs/login** — Page login logs
+  - Tags: Logs
+  - Body schemas: `#/definitions/dto.SearchLgLogWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /logs/operation** — Page operation logs
+  - Tags: Logs
+  - Body schemas: `#/definitions/dto.SearchOpLogWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /logs/system** — Load system logs
+  - Tags: Logs
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /logs/system/files** — Load system log files
+  - Tags: Logs
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Container Network
+
+- **`GET` /containers/network** — List networks
+  - Tags: Container Network
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.Options`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/network** — Create network
+  - Tags: Container Network
+  - Body schemas: `#/definitions/dto.NetworkCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/network/del** — Delete network
+  - Tags: Container Network
+  - Body schemas: `#/definitions/dto.BatchDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/network/search** — Page networks
+  - Tags: Container Network
+  - Body schemas: `#/definitions/dto.SearchWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+
+## Tag: Container Volume
+
+- **`GET` /containers/volume** — List Container Volumes
+  - Tags: Container Volume
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.Options`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/volume** — Create Container Volume
+  - Tags: Container Volume
+  - Body schemas: `#/definitions/dto.VolumeCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/volume/del** — Delete Container Volume
+  - Tags: Container Volume
+  - Body schemas: `#/definitions/dto.BatchDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /containers/volume/search** — Page Container Volumes
+  - Tags: Container Volume
+  - Body schemas: `#/definitions/dto.SearchWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+
+## Tag: Dashboard
+
+- **`GET` /dashboard/base/os** — Load os info
+  - Tags: Dashboard
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.OsInfo`
+  - Path params: None
+  - Query params: None
+- **`GET` /dashboard/base/{ioOption}/{netOption}** — Load dashboard base info
+  - Tags: Dashboard
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.DashboardBase`
+  - Path params: ioOption, netOption
+  - Query params: None
+- **`POST` /dashboard/current** — Load dashboard current info
+  - Tags: Dashboard
+  - Body schemas: `#/definitions/dto.DashboardReq`
+  - Responses: `200` → `#/definitions/dto.DashboardCurrent`
+  - Path params: None
+  - Query params: None
+- **`POST` /dashboard/system/restart/{operation}** — System restart panel
+  - Tags: Dashboard
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: operation
+  - Query params: None
+
+## Tag: PHP Extensions
+
+- **`POST` /runtimes/php/extensions** — Create Extensions
+  - Tags: PHP Extensions
+  - Body schemas: `#/definitions/request.PHPExtensionsCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /runtimes/php/extensions/del** — Delete Extensions
+  - Tags: PHP Extensions
+  - Body schemas: `#/definitions/request.PHPExtensionsDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /runtimes/php/extensions/search** — Page Extensions
+  - Tags: PHP Extensions
+  - Body schemas: `#/definitions/request.PHPExtensionsSearch`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /runtimes/php/extensions/update** — Update Extensions
+  - Tags: PHP Extensions
+  - Body schemas: `#/definitions/request.PHPExtensionsUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Redis Command
+
+- **`GET` /hosts/command/redis** — List redis commands
+  - Tags: Redis Command
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.RedisCommand`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/command/redis** — Save redis command
+  - Tags: Redis Command
+  - Body schemas: `#/definitions/dto.RedisCommand`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/command/redis/del** — Delete redis command
+  - Tags: Redis Command
+  - Body schemas: `#/definitions/dto.BatchDeleteReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/command/redis/search** — Page redis commands
+  - Tags: Redis Command
+  - Body schemas: `#/definitions/dto.SearchWithPage`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+
+## Tag: System Group
+
+- **`POST` /groups** — Create system group
+  - Tags: System Group
+  - Body schemas: `#/definitions/dto.GroupCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /groups/del** — Delete system group
+  - Tags: System Group
+  - Body schemas: `#/definitions/dto.OperateByID`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /groups/search** — List system groups
+  - Tags: System Group
+  - Body schemas: `#/definitions/dto.GroupSearch`
+  - Responses: `200` → `#/definitions/dto.GroupInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /groups/update** — Update system group
+  - Tags: System Group
+  - Body schemas: `#/definitions/dto.GroupUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Website DNS
+
+- **`POST` /websites/dns** — Create website dns account
+  - Tags: Website DNS
+  - Body schemas: `#/definitions/request.WebsiteDnsAccountCreate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/dns/del** — Delete website dns account
+  - Tags: Website DNS
+  - Body schemas: `#/definitions/request.WebsiteResourceReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/dns/search** — Page website dns accounts
+  - Tags: Website DNS
+  - Body schemas: `#/definitions/dto.PageInfo`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/dns/update** — Update website dns account
+  - Tags: Website DNS
+  - Body schemas: `#/definitions/request.WebsiteDnsAccountUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Website Nginx
+
+- **`POST` /websites/config** — Load nginx conf
+  - Tags: Website Nginx
+  - Body schemas: `#/definitions/request.NginxScopeReq`
+  - Responses: `200` → `#/definitions/response.WebsiteNginxConfig`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/config/update** — Update nginx conf
+  - Tags: Website Nginx
+  - Body schemas: `#/definitions/request.NginxConfigUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/nginx/update** — Update website nginx conf
+  - Tags: Website Nginx
+  - Body schemas: `#/definitions/request.WebsiteNginxUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /websites/{id}/config/{type}** — Search website nginx by id
+  - Tags: Website Nginx
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.FileInfo`
+  - Path params: id, type
+  - Query params: None
+
+## Tag: Database Common
+
+- **`POST` /databases/common/info** — Load base info
+  - Tags: Database Common
+  - Body schemas: `#/definitions/dto.OperationWithNameAndType`
+  - Responses: `200` → `#/definitions/dto.DBBaseInfo`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/common/load/file** — Load Database conf
+  - Tags: Database Common
+  - Body schemas: `#/definitions/dto.OperationWithNameAndType`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /databases/common/update/conf** — Update conf by upload file
+  - Tags: Database Common
+  - Body schemas: `#/definitions/dto.DBConfUpdateByFile`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: Website Acme
+
+- **`POST` /websites/acme** — Create website acme account
+  - Tags: Website Acme
+  - Body schemas: `#/definitions/request.WebsiteAcmeAccountCreate`
+  - Responses: `200` → `#/definitions/response.WebsiteAcmeAccountDTO`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/acme/del** — Delete website acme account
+  - Tags: Website Acme
+  - Body schemas: `#/definitions/request.WebsiteResourceReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/acme/search** — Page website acme accounts
+  - Tags: Website Acme
+  - Body schemas: `#/definitions/dto.PageInfo`
+  - Responses: `200` → `#/definitions/dto.PageResult`
+  - Path params: None
+  - Query params: None
+
+## Tag: Website Domain
+
+- **`POST` /websites/domains** — Create website domain
+  - Tags: Website Domain
+  - Body schemas: `#/definitions/request.WebsiteDomainCreate`
+  - Responses: `200` → `#/definitions/model.WebsiteDomain`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/domains/del** — Delete website domain
+  - Tags: Website Domain
+  - Body schemas: `#/definitions/request.WebsiteDomainDelete`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`GET` /websites/domains/{websiteId}** — Search website domains by websiteId
+  - Tags: Website Domain
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/model.WebsiteDomain`
+  - Path params: websiteId
+  - Query params: None
+
+## Tag: Website PHP
+
+- **`POST` /websites/php/config** — Update website php conf
+  - Tags: Website PHP
+  - Body schemas: `#/definitions/request.WebsitePHPConfigUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/php/update** — Update php conf
+  - Tags: Website PHP
+  - Body schemas: `#/definitions/request.WebsitePHPFileUpdate`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /websites/php/version** — Update php version
+  - Tags: Website PHP
+  - Body schemas: `#/definitions/request.WebsitePHPVersionReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+
+## Tag: (untagged)
+
+- **`GET` /containers/limit** — Load container limits
+  - Tags: (untagged)
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.ResourceLimit`
+  - Path params: None
+  - Query params: None
+- **`GET` /containers/list/stats** — Load container stats
+  - Tags: (untagged)
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/dto.ContainerListStats`
+  - Path params: None
+  - Query params: None
+
+## Tag: Monitor
+
+- **`POST` /hosts/monitor/clean** — Clean monitor datas
+  - Tags: Monitor
+  - Body schemas: `None`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+- **`POST` /hosts/monitor/search** — Load monitor datas
+  - Tags: Monitor
+  - Body schemas: `#/definitions/dto.MonitorSearch`
+  - Responses: `200` → `#/definitions/dto.MonitorData`
+  - Path params: None
+  - Query params: None
+
+## Tag: Website HTTPS
+
+- **`GET` /websites/{id}/https** — Load https conf
+  - Tags: Website HTTPS
+  - Body schemas: `None`
+  - Responses: `200` → `#/definitions/response.WebsiteHTTPS`
+  - Path params: id
+  - Query params: None
+- **`POST` /websites/{id}/https** — Update https conf
+  - Tags: Website HTTPS
+  - Body schemas: `#/definitions/request.WebsiteHTTPSOp`
+  - Responses: `200` → `#/definitions/response.WebsiteHTTPS`
+  - Path params: id
+  - Query params: None
+
+## Tag: Process
+
+- **`POST` /process/stop** — Stop Process
+  - Tags: Process
+  - Body schemas: `#/definitions/request.ProcessReq`
+  - Responses: `200` → `None`
+  - Path params: None
+  - Query params: None
+

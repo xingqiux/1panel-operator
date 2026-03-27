@@ -1,0 +1,7 @@
+{
+  "base_url": "https://panel.example.com",
+  "api_key": "replace-with-local-api-key",
+  "timeout": 20,
+  "verify_tls": true,
+  "swagger_cache_ttl_seconds": 600
+}
