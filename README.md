@@ -31,49 +31,47 @@ This repository provides both:
   - `config/local.json` is ignored
   - public example config stays generic
   - instance-specific notes belong in local-only files
-- No third-party Python runtime dependencies in the core CLI
 
-## Repository Layout
+## Installation
 
-```text
-.
-├── README.md
-├── SKILL.md
-├── agents/
-│   └── openai.yaml
-├── config/
-│   └── local.example.json
-├── references/
-│   ├── api-auth.md
-│   ├── api-coverage.md
-│   ├── api-workflows.md
-│   └── generated/
-└── scripts/
-    ├── panel_cli.py
-    ├── panel_client.py
-    ├── panel_config.py
-    ├── panel_auth.py
-    ├── build_swagger_artifacts.py
-    └── actions/
+Install in development mode:
+
+```bash
+pip install -e .
 ```
 
-## Requirements
+With development dependencies (pytest, pytest-httpx, ruff):
 
-- Python 3.10 or later
-- A reachable 1Panel base URL
-- A valid 1Panel API key
+```bash
+pip install -e ".[dev]"
+```
+
+After installation, the `1panel` command is available globally.
 
 ## Configuration
 
 The CLI reads configuration from environment variables first, then falls back to `config/local.json`.
 
-Supported environment variables:
+### Environment Variables (preferred)
 
-- `1PANEL_BASE_URL`
-- `1PANEL_API_KEY`
-- `1PANEL_TIMEOUT`
-- `1PANEL_VERIFY_TLS`
-- `1PANEL_SWAGGER_CACHE_TTL`
+```bash
+export ONEPANEL_BASE_URL="https://panel.example.com"
+export ONEPANEL_API_KEY="your-api-key"
+```
+
+### Supported Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `ONEPANEL_BASE_URL` | (required) | 1Panel instance base URL |
+| `ONEPANEL_API_KEY` | (required) | 1Panel API key |
+| `ONEPANEL_TIMEOUT` | `20` | HTTP request timeout in seconds |
+| `ONEPANEL_VERIFY_TLS` | `true` | Whether to verify TLS certificates |
+| `ONEPANEL_SWAGGER_CACHE_TTL_SECONDS` | `600` | Swagger spec cache TTL |
+
+**Backward compatibility:** The legacy `1PANEL_` prefix (e.g. `1PANEL_BASE_URL`, `1PANEL_API_KEY`) is still supported. The `ONEPANEL_` prefix takes priority when both are set.
+
+### Local Config File
 
 Create a local config file from the example:
 
@@ -110,53 +108,58 @@ The CLI sends:
 - `1Panel-Token`
 - `1Panel-Timestamp`
 
-See [references/api-auth.md](references/api-auth.md) for the detailed authentication notes used by the skill.
+See [references/api-auth.md](references/api-auth.md) for detailed authentication notes.
 
-## Quick Start
+## CLI Command Reference
 
-Check resolved configuration:
+### Domain Commands
 
 ```bash
-python3 scripts/panel_cli.py config show
-python3 scripts/panel_cli.py config cache
+1panel website list              # List websites
+1panel website overview          # Website overview with HTTPS and proxy details
+1panel app list                  # List installed applications
+1panel container list            # List container names
+1panel dashboard                 # Show current dashboard metrics
+1panel host list                 # Search hosts with pagination
+1panel host tree                 # Show host tree structure
+1panel host commands             # List saved host commands
+1panel firewall status           # Show firewall base status
 ```
 
-Check API connectivity:
+All domain commands support `--raw` to print the full API response.
+
+### API Discovery and Raw Access
 
 ```bash
-python3 scripts/panel_cli.py ping
+1panel api discover              # Discover Swagger endpoints
+1panel api discover --match website
+1panel api schema SCHEMA_NAME    # View a Swagger schema definition
+1panel api template METHOD PATH  # Generate a request template
+1panel api call --method GET --path /websites/list
 ```
 
-Run common read tasks:
+### Configuration and Connectivity
 
 ```bash
-python3 scripts/panel_cli.py task website-overview
-python3 scripts/panel_cli.py task website-overview --no-https --no-proxies
-python3 scripts/panel_cli.py task website-inspect --domain example.com
-python3 scripts/panel_cli.py dashboard current
-python3 scripts/panel_cli.py websites list
-python3 scripts/panel_cli.py apps list
-python3 scripts/panel_cli.py containers list
-python3 scripts/panel_cli.py hosts list
-python3 scripts/panel_cli.py firewall base
+1panel config show               # Show resolved configuration
+1panel config cache              # Show Swagger cache info
+1panel ping                      # Check API connectivity
 ```
 
 ## Command Model
 
 The CLI is intentionally split into two layers.
 
-### 1. Task and Domain Commands
+### 1. Domain Commands
 
 Use these first for routine diagnostics:
 
-- `task ...`
-- `websites ...`
-- `dashboard ...`
-- `apps ...`
-- `containers ...`
-- `hosts ...`
-- `host-commands ...`
-- `firewall ...`
+- `website ...` — website management
+- `dashboard` — system metrics
+- `app ...` — installed applications
+- `container ...` — Docker containers
+- `host ...` — remote hosts and saved commands
+- `firewall ...` — firewall status
 
 These commands return normalized, safe summaries instead of raw payload dumps by default.
 
@@ -164,10 +167,10 @@ These commands return normalized, safe summaries instead of raw payload dumps by
 
 Use these when the task is unfamiliar or when preparing a write:
 
-- `discover ...`
-- `schema ...`
-- `template ...`
-- `call ...`
+- `api discover` — find endpoints
+- `api schema` — inspect schemas
+- `api template` — generate request body templates
+- `api call` — execute API calls with optional confirmation gates
 
 Typical flow:
 
@@ -175,15 +178,6 @@ Typical flow:
 2. Inspect request and response schema
 3. Generate a request template
 4. Execute a controlled API call
-
-Examples:
-
-```bash
-python3 scripts/panel_cli.py discover swagger-url
-python3 scripts/panel_cli.py discover endpoints --match website
-python3 scripts/panel_cli.py schema show request.WebsiteCreate
-python3 scripts/panel_cli.py template POST /websites
-```
 
 ## Safe Write Workflow
 
@@ -194,55 +188,24 @@ Without `--confirm`, a non-safe request prints the execution plan instead of sen
 Examples:
 
 ```bash
-python3 scripts/panel_cli.py call POST /websites/update --body-file payload.json
-python3 scripts/panel_cli.py call POST /websites/update --body-file payload.json --confirm
+1panel api call --method POST --path /websites/update --body-file payload.json
+1panel api call --method POST --path /websites/update --body-file payload.json --confirm
 ```
 
-If a Swagger-confirmed read endpoint uses `POST`, you can allow it explicitly:
+## Development
+
+Run the test suite:
 
 ```bash
-python3 scripts/panel_cli.py call POST /containers/list --body '{}' --assume-read
+pip install -e ".[dev]"
+pytest
 ```
 
-## Response Behavior
-
-The raw `call` command supports multiple output modes:
-
-- default: normalized payload with `data` and lightweight metadata
-- `--data-only`: print only the normalized `data` field
-- `--raw-response`: print the legacy raw response structure
-
-This makes the CLI easier to use both for humans and for LLM-driven automation.
-
-## Generated Swagger Artifacts
-
-The repository can generate generic API reference artifacts under `references/generated/`.
-
-To rebuild them:
+Lint with ruff:
 
 ```bash
-python3 scripts/build_swagger_artifacts.py
+ruff check src/ tests/
 ```
-
-Generated outputs include:
-
-- tag-level summaries
-- path-level indexes
-- schema name lists
-- machine-readable JSON indexes
-
-The generator rewrites the source URL to a generic placeholder so the output is safer to publish.
-
-## Open-Source Hygiene
-
-This repository is intended to be publishable.
-
-Before pushing, keep these rules:
-
-- do not commit `config/local.json`
-- do not commit instance-specific notes in `references/*.local.md`
-- keep example config values generic
-- avoid embedding private domains, base URLs, or credentials in generated docs
 
 ## Related Files
 
