@@ -5,6 +5,16 @@ description: Operate and debug a 1Panel instance through its authenticated API a
 
 Use this skill to operate 1Panel through the API instead of describing the product.
 
+## Prerequisites
+
+The CLI must be installed before use. Run once in the skill directory:
+
+```bash
+pip install -e /path/to/1panel-operator
+```
+
+After installation, the `1panel` command is available globally. If `1panel` is not found, fall back to `pip install -e <skill_root>` first.
+
 ## Activation Behavior
 
 When the skill is invoked explicitly:
