@@ -268,6 +268,7 @@ def inspect(
 
 
 # Sub-module registration (added as sub-modules are implemented)
-from onepanel.cli import website_ssl  # noqa: E402
+from onepanel.cli import website_ca, website_ssl  # noqa: E402
 
 app.add_typer(website_ssl.app, name="ssl")
+app.add_typer(website_ca.app, name="ca")
