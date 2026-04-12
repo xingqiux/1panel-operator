@@ -75,9 +75,9 @@ def stats_cmd(
 
 
 # Sub-module registration (added as sub-modules are implemented)
-# from onepanel.cli import container_image, container_compose  # noqa: E402
+from onepanel.cli import container_image  # noqa: E402
 # from onepanel.cli import container_network, container_volume, container_docker  # noqa: E402
-# app.add_typer(container_image.app, name="image")
+app.add_typer(container_image.app, name="image")
 # app.add_typer(container_compose.app, name="compose")
 # app.add_typer(container_network.app, name="network")
 # app.add_typer(container_volume.app, name="volume")
