@@ -37,7 +37,7 @@ def print_json(value) -> None:
 
 from onepanel.cli.main import config_app, ping  # noqa: E402
 from onepanel.cli import api, application, backup, clam, database, ftp, website  # noqa: E402
-from onepanel.cli import container, dashboard, device, firewall, host, logs, ssh, system  # noqa: E402
+from onepanel.cli import container, dashboard, device, fail2ban, firewall, host, logs, ssh, system  # noqa: E402
 
 app.command("ping")(ping)
 app.add_typer(config_app, name="config")
@@ -54,5 +54,6 @@ app.add_typer(logs.app, name="logs")
 app.add_typer(ssh.app, name="ssh")
 app.add_typer(system.app, name="system")
 app.add_typer(device.app, name="device")
+app.add_typer(fail2ban.app, name="fail2ban")
 app.add_typer(firewall.app, name="firewall")
 app.add_typer(api.app, name="api")

@@ -13,8 +13,6 @@ def test_firewall_help():
     output = result.output.lower()
     assert "status" in output
     assert "rules" in output
-    assert "fail2ban" in output
-    assert "fail2ban-ips" in output
 
 
 def test_firewall_status_help():
@@ -34,21 +32,3 @@ def test_firewall_rules_help():
     assert "--page" in result.output
     assert "--page-size" in result.output
 
-
-def test_firewall_fail2ban_help():
-    from onepanel.cli.firewall import app
-
-    result = runner.invoke(app, ["fail2ban", "--help"])
-    assert result.exit_code == 0
-    assert "--raw" in result.output
-
-
-def test_firewall_fail2ban_ips_help():
-    from onepanel.cli.firewall import app
-
-    result = runner.invoke(app, ["fail2ban-ips", "--help"])
-    assert result.exit_code == 0
-    assert "--raw" in result.output
-    assert "--status" in result.output
-    assert "--page" in result.output
-    assert "--page-size" in result.output
