@@ -1,5 +1,7 @@
 # 1Panel Operator
 
+[中文文档](README_zh.md)
+
 `1panel-operator` is a task-first skill and CLI for inspecting and operating a 1Panel instance through its authenticated API.
 
 It is designed for two use cases:
@@ -112,21 +114,125 @@ See [references/api-auth.md](references/api-auth.md) for detailed authentication
 
 ## CLI Command Reference
 
-### Domain Commands
+### Core Commands
+
+```bash
+1panel ping                      # Check API connectivity
+1panel config show               # Show resolved configuration
+1panel config cache              # Show Swagger cache info
+```
+
+### Website Commands
 
 ```bash
 1panel website list              # List websites
 1panel website overview          # Website overview with HTTPS and proxy details
+1panel website inspect           # Inspect one website in detail
+1panel website ssl list          # List SSL certificates
+1panel website ca list           # List CA certificates
+1panel website acme list         # List ACME accounts
+1panel website dns list          # List DNS accounts
+1panel website domain list       # List domains for a website
+```
+
+### Container Commands
+
+```bash
+1panel container list            # List containers with state/image/ports
+1panel container stats           # Show container resource usage
+1panel container image list      # List Docker images
+1panel container compose list    # List Compose stacks
+1panel container network list    # List Docker networks
+1panel container volume list     # List Docker volumes
+1panel container docker status   # Show Docker daemon status
+```
+
+### Application Commands
+
+```bash
 1panel app list                  # List installed applications
-1panel container list            # List container names
-1panel dashboard                 # Show current dashboard metrics
+1panel app show ID               # Show application details
+```
+
+### Database Commands
+
+```bash
+1panel database list             # List all databases
+1panel database show NAME        # Show database details
+1panel database mysql-list       # List MySQL databases
+1panel database mysql-status     # Show MySQL status
+1panel database pg-list          # List PostgreSQL databases
+1panel database redis-status     # Show Redis status
+1panel database redis-conf       # Show Redis configuration
+1panel database redis-commands   # List saved Redis commands
+```
+
+### System & Host Commands
+
+```bash
+1panel dashboard                 # Show dashboard metrics
 1panel host list                 # Search hosts with pagination
 1panel host tree                 # Show host tree structure
 1panel host commands             # List saved host commands
-1panel firewall status           # Show firewall base status
+1panel host ssh-status           # Show SSH configuration
+1panel host ssh-logs             # Search SSH login logs
+1panel host tool-status          # Check host tool status
+1panel system info               # Show system settings
+1panel system ssl-info           # Show system certificate info
+1panel system snapshot-list      # List system snapshots
+1panel system group-list         # List host groups
+1panel device info               # Show device base info
 ```
 
-All domain commands support `--raw` to print the full API response.
+### Security Commands
+
+```bash
+1panel firewall status           # Show firewall base status
+1panel firewall rules            # List firewall rules
+1panel fail2ban status           # Show Fail2ban status
+1panel fail2ban conf             # Show Fail2ban configuration
+1panel fail2ban list             # List banned/ignored IPs
+1panel ssh status                # Show SSH status
+1panel ssh conf                  # Show raw SSH config
+1panel ssh logs                  # Search SSH login logs
+1panel clam status               # Show ClamAV status
+1panel clam list                 # List ClamAV scan definitions
+1panel clam records              # List ClamAV scan records
+```
+
+### Service Commands
+
+```bash
+1panel openresty status          # Show OpenResty status
+1panel openresty config          # Show OpenResty config
+1panel ftp status                # Show FTP status
+1panel ftp list                  # List FTP users
+1panel ftp logs                  # List FTP operation logs
+1panel runtime list              # List application runtimes
+1panel runtime show ID           # Show runtime details
+1panel cronjob list              # List scheduled cron jobs
+1panel cronjob show ID           # Show cron job details
+1panel backup list               # List backup accounts
+1panel backup records            # List backup records
+1panel ai gpu                    # Show GPU/XPU status
+1panel ai models                 # List Ollama models
+```
+
+### Log Commands
+
+```bash
+1panel logs login                # Search login logs
+1panel logs operation            # Search operation logs
+1panel logs system               # Load system logs
+1panel logs files                # List system log files
+```
+
+### File Management
+
+```bash
+1panel file list PATH            # List files in a directory
+1panel file tree PATH            # Show directory tree
+```
 
 ### API Discovery and Raw Access
 
@@ -138,13 +244,7 @@ All domain commands support `--raw` to print the full API response.
 1panel api call --method GET --path /websites/list
 ```
 
-### Configuration and Connectivity
-
-```bash
-1panel config show               # Show resolved configuration
-1panel config cache              # Show Swagger cache info
-1panel ping                      # Check API connectivity
-```
+All domain commands support `--raw` to print the full API response.
 
 ## Command Model
 
