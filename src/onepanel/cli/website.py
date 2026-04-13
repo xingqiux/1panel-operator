@@ -265,3 +265,13 @@ def inspect(
         "status_code": base["status_code"],
         "url": base["url"],
     })
+
+
+# Sub-module registration (added as sub-modules are implemented)
+from onepanel.cli import website_acme, website_ca, website_dns, website_domain, website_ssl  # noqa: E402
+
+app.add_typer(website_ssl.app, name="ssl")
+app.add_typer(website_ca.app, name="ca")
+app.add_typer(website_acme.app, name="acme")
+app.add_typer(website_dns.app, name="dns")
+app.add_typer(website_domain.app, name="domain")

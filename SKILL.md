@@ -71,18 +71,68 @@ Use the skill in this priority order:
 
 ## Key Commands
 
+### Core
 ```bash
-1panel config show
-1panel config cache
-1panel website list
-1panel website overview
-1panel dashboard
-1panel app list
-1panel container list
-1panel host list
-1panel host tree
-1panel host commands
-1panel firewall status
+1panel ping                      # Check API connectivity
+1panel config show               # Show resolved configuration
+```
+
+### Websites
+```bash
+1panel website list              # List websites
+1panel website overview          # Website overview with HTTPS/proxy
+1panel website ssl list          # List SSL certificates
+1panel website domain list       # List domains
+```
+
+### Containers
+```bash
+1panel container list            # List containers with state/image
+1panel container stats           # Container resource usage
+1panel container image list      # List Docker images
+1panel container compose list    # List Compose stacks
+1panel container network list    # List networks
+1panel container volume list     # List volumes
+```
+
+### Databases
+```bash
+1panel database list             # List databases
+1panel database mysql-status     # MySQL status
+1panel database redis-status     # Redis status
+```
+
+### System & Security
+```bash
+1panel dashboard                 # Dashboard metrics
+1panel host list                 # List hosts
+1panel system info               # System settings
+1panel firewall status           # Firewall status
+1panel firewall rules            # List firewall rules
+1panel fail2ban status           # Fail2ban status
+1panel ssh status                # SSH status
+```
+
+### Services
+```bash
+1panel app list                  # Installed applications
+1panel openresty status          # OpenResty status
+1panel ftp list                  # FTP users
+1panel runtime list              # Application runtimes
+1panel cronjob list              # Scheduled jobs
+1panel backup list               # Backup accounts
+1panel ai gpu                    # GPU status
+1panel logs login                # Login logs
+```
+
+### Files
+```bash
+1panel file list PATH            # List files
+1panel file tree PATH            # Directory tree
+```
+
+### API Discovery
+```bash
 1panel api discover --match website
 ```
 
@@ -111,11 +161,21 @@ For common read tasks, the default budget is:
 
 High-frequency resource domains confirmed from the target Swagger definition:
 
-- `Dashboard`: `/dashboard/current`
-- `Apps`: `/apps/installed/list`, `/apps/installed/search`, `/apps/install`
-- `Containers`: `/containers/list`, `/containers/search`, `/containers/operate`
-- `Websites`: `/websites/list`, `/websites/search`, `/websites/update`, `/websites/proxies`
-- `Hosts`: `/hosts/search`, `/hosts/tool/*`, `/hosts/ssh/*`
-- `Firewall`: `/hosts/firewall/base`
+| Domain | Key Endpoints |
+|--------|---------------|
+| Dashboard | `/dashboard/base/os`, `/dashboard/base/all/all` |
+| Apps | `/apps/installed/search`, `/apps/installed/{id}` |
+| Containers | `/containers/search`, `/containers/list/stats` |
+| Websites | `/websites/list`, `/websites/{id}/https`, `/websites/proxies` |
+| SSL/CA/ACME | `/websites/ssl/search`, `/websites/ca/search`, `/websites/acme/search` |
+| Databases | `/databases/search`, `/databases/mysql/search`, `/databases/redis/status` |
+| Hosts | `/hosts/search`, `/hosts/tool/*`, `/hosts/ssh/*` |
+| Firewall | `/hosts/firewall/base`, `/hosts/firewall/search` |
+| Fail2ban | `/toolbox/fail2ban/base`, `/toolbox/fail2ban/search` |
+| Services | `/openresty`, `/toolbox/ftp/base`, `/runtimes/search` |
+| System | `/settings/info`, `/settings/ssl/info`, `/settings/snapshot/search` |
+| Logs | `/logs/login`, `/logs/operation`, `/logs/system` |
+| Files | `/files/search`, `/files/tree` |
+| AI | `/ai/gpu`, `/ai/ollama/models` |
 
 For more detailed calling conventions and error handling, see `references/api-workflows.md`.
