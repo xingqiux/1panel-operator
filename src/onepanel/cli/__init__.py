@@ -36,7 +36,7 @@ def print_json(value) -> None:
 
 
 from onepanel.cli.main import config_app, ping  # noqa: E402
-from onepanel.cli import ai, api, application, backup, clam, database, file_mgr, ftp, website  # noqa: E402
+from onepanel.cli import ai, api, application, backup, clam, cronjob, database, file_mgr, ftp, website  # noqa: E402
 from onepanel.cli import container, dashboard, device, fail2ban, firewall, host, logs, runtime, ssh, system  # noqa: E402
 from onepanel.cli import openresty  # noqa: E402
 
@@ -49,6 +49,7 @@ app.add_typer(container.app, name="container")
 app.add_typer(dashboard.app, name="dashboard")
 app.add_typer(database.app, name="database")
 app.add_typer(backup.app, name="backup")
+app.add_typer(cronjob.app, name="cronjob")
 app.add_typer(file_mgr.app, name="file")
 app.add_typer(runtime.app, name="runtime")
 app.add_typer(clam.app, name="clam")
