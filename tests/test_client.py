@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-
 import pytest
 from pytest_httpx import HTTPXMock
 
@@ -42,7 +41,12 @@ def test_request_http_error_raises_panel_api_error(client: PanelClient, httpx_mo
     httpx_mock.add_response(status_code=500, json={"code": 500, "message": "internal error"})
     with pytest.raises(PanelAPIError) as exc_info:
         client.request("GET", "/bad-endpoint")
-    assert exc_info.value.status_code == 500
+    exc = exc_info.value
+    assert exc.status_code == 500
+    assert exc.api_message == "internal error"
+    assert exc.api_code == 500
+    assert str(exc) == "internal error"
+    assert exc.hint == "Server error. Try again later or check 1Panel logs."
 
 
 def test_ping(client: PanelClient, httpx_mock: HTTPXMock):

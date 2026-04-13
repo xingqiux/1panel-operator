@@ -74,10 +74,18 @@ class PanelClient:
             }
         except httpx.HTTPStatusError as exc:
             payload = self._decode_payload(exc.response.content, exc.response.headers.get("content-type", ""))
+            api_message = None
+            api_code = None
+            json_body = payload.get("json")
+            if isinstance(json_body, dict):
+                api_message = json_body.get("message")
+                api_code = json_body.get("code")
             raise PanelAPIError(
                 f"1Panel API returned HTTP {exc.response.status_code} for {method} {url}",
                 status_code=exc.response.status_code,
                 payload=payload,
+                api_message=api_message,
+                api_code=api_code,
             ) from exc
         except httpx.RequestError as exc:
             raise PanelAPIError(f"Failed to reach 1Panel API at {url}: {exc}") from exc

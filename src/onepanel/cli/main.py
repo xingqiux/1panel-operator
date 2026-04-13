@@ -20,11 +20,16 @@ def ping(ctx: typer.Context) -> None:
             "url": response["url"],
         })
     except PanelAPIError as exc:
-        print_json({
+        output = {
             "ok": False,
             "error": str(exc),
             "status_code": exc.status_code,
-        })
+        }
+        if exc.api_message:
+            output["api_message"] = exc.api_message
+        if exc.hint:
+            output["hint"] = exc.hint
+        print_json(output)
         raise typer.Exit(1)
 
 
