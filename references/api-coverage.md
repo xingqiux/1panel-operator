@@ -16,10 +16,10 @@ Only fall back to the full Swagger loop when those commands do not cover the req
 
 Think of the full-coverage loop as four steps:
 
-1. **Swagger discovery** – run `python3 scripts/panel_cli.py discover swagger-url` to resolve the active `doc.json`, then use `discover endpoints --match <keyword>` (optionally `--tag`) to enumerate operations and confirm the method & path.
+1. **Swagger discovery** – run `1panel api discover swagger-url` to resolve the active `doc.json`, then use `discover endpoints --match <keyword>` (optionally `--tag`) to enumerate operations and confirm the method & path.
 2. **Schema lookup** – once you know the path, open the `doc.json` payload or inspect the `components` node to see the accepted request schema and response shape. The CLI downloads that JSON automatically via `PanelClient.swagger_spec()`, so you can copy/paste example objects or follow the property names defined there.
 3. **Request-template generation** – build the request body from the schema, either inline with `--body` or by editing a file and passing `--body-file payload.json`. Use `--dry-run` or the standard `plan` output to verify the method, URL, query string, and summary of the change before actually hitting the API.
-4. **Raw call** – execute `python3 scripts/panel_cli.py call METHOD /path --body-file payload.json --confirm` (or add `--assume-read` for verified read-only POSTs). The raw `call` command is what unlocks the full API surface once you have a body template and path.
+4. **Raw call** – execute `1panel api call METHOD /path --body-file payload.json --confirm` (or add `--assume-read` for verified read-only POSTs). The raw `call` command is what unlocks the full API surface once you have a body template and path.
 
 The repository can also keep a generated API catalog under `references/generated/`:
 
