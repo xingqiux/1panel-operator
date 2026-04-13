@@ -10,6 +10,7 @@ from onepanel.auth import build_headers
 from onepanel.config import PanelConfig
 from onepanel.models import PanelAPIError
 from onepanel.swagger import SwaggerCache
+from onepanel.types import HTTPResponse, NormalizedResponse
 
 SAFE_METHODS = {"GET", "HEAD", "OPTIONS"}
 
@@ -47,7 +48,7 @@ class PanelClient:
         body: Any | None = None,
         query: dict[str, str] | None = None,
         extra_headers: dict[str, str] | None = None,
-    ) -> dict[str, Any]:
+    ) -> HTTPResponse:
         method = method.upper()
         headers = build_headers(self.config.api_key)
         headers["Accept"] = "application/json"
@@ -100,7 +101,7 @@ class PanelClient:
     def ping(self) -> dict[str, Any]:
         return self.request("GET", "/websites/list")
 
-    def normalize_response_payload(self, response: dict[str, Any]) -> dict[str, Any]:
+    def normalize_response_payload(self, response: HTTPResponse) -> NormalizedResponse:
         body = response["body"]
         meta = {
             "status_code": response["status_code"],
