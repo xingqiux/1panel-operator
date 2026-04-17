@@ -139,9 +139,9 @@ pip install -e /path/to/1panel-operator
 写操作示例：
 
 ```bash
-1panel api call --method POST --path /websites/update --body-file payload.json
-1panel api call --method POST --path /websites/update --body-file payload.json --confirm
-1panel api call --method POST --path /containers/list --body '{}' --assume-read
+1panel api call POST /websites/update --body-file payload.json
+1panel api call POST /websites/update --body-file payload.json --confirm
+1panel api call POST /containers/list --body '{}' --assume-read
 ```
 
 第一个命令显示执行计划。第二个实际执行。第三个用于 Swagger 确认的使用 POST 的只读端点。

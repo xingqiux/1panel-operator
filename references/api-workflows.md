@@ -11,21 +11,21 @@
 推荐顺序：
 
 1. 先判断这是不是常见读任务
-2. 如果是常见读任务，优先使用 `task ...`
-3. 如果 `task` 没覆盖，再使用领域命令
+2. 如果是常见读任务，优先使用现成的领域命令
+3. 如果领域命令没覆盖，再进入 Swagger 探索
 4. 只有不熟悉的接口，才进入 `discover/schema/template/call`
 
 常见读任务示例：
 
-- “列出网站” -> `websites list`
-- “当前网站配置是怎样的” -> `task website-overview`
-- “只看网站基础列表，不要 SSL/代理细节” -> `task website-overview --no-https --no-proxies`
-- “看某个站点的当前配置” -> `task website-inspect --domain example.com`
-- `task website-overview`
-- `task website-inspect --domain example.com`
-- `dashboard current`
-- `apps list`
-- `containers list`
+- “列出网站” -> `1panel website list`
+- “当前网站配置是怎样的” -> `1panel website overview`
+- “只看网站基础列表，不要 SSL/代理细节” -> `1panel website overview --no-https --no-proxies`
+- “看某个站点的当前配置” -> `1panel website inspect --domain example.com`
+- `1panel website overview`
+- `1panel website inspect --domain example.com`
+- `1panel dashboard`
+- `1panel app list`
+- `1panel container list`
 
 查询类任务预算：
 

@@ -139,9 +139,9 @@ Use the skill in this priority order:
 Write operation examples:
 
 ```bash
-1panel api call --method POST --path /websites/update --body-file payload.json
-1panel api call --method POST --path /websites/update --body-file payload.json --confirm
-1panel api call --method POST --path /containers/list --body '{}' --assume-read
+1panel api call POST /websites/update --body-file payload.json
+1panel api call POST /websites/update --body-file payload.json --confirm
+1panel api call POST /containers/list --body '{}' --assume-read
 ```
 
 The first command shows the execution plan. The second actually executes. The third is for Swagger-confirmed read-only endpoints that use POST.

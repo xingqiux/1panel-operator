@@ -239,9 +239,10 @@ See [references/api-auth.md](references/api-auth.md) for detailed authentication
 ```bash
 1panel api discover              # Discover Swagger endpoints
 1panel api discover --match website
-1panel api schema SCHEMA_NAME    # View a Swagger schema definition
-1panel api template METHOD PATH  # Generate a request template
-1panel api call --method GET --path /websites/list
+1panel api schema list --match website
+1panel api schema show request.WebsiteCreate
+1panel api template POST /websites  # Generate a request template
+1panel api call GET /websites/list
 ```
 
 All domain commands support `--raw` to print the full API response.
@@ -288,8 +289,8 @@ Without `--confirm`, a non-safe request prints the execution plan instead of sen
 Examples:
 
 ```bash
-1panel api call --method POST --path /websites/update --body-file payload.json
-1panel api call --method POST --path /websites/update --body-file payload.json --confirm
+1panel api call POST /websites/update --body-file payload.json
+1panel api call POST /websites/update --body-file payload.json --confirm
 ```
 
 ## Development

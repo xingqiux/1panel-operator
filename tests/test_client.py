@@ -100,3 +100,14 @@ def test_normalize_response_non_envelope(client: PanelClient):
     normalized = client.normalize_response_payload(response)
     assert normalized["data"] == "plain text"
     assert "_meta" in normalized
+
+
+def test_decode_payload_extracts_json_from_html_wrapper(client: PanelClient):
+    raw = b"""<!DOCTYPE html>
+<html><body>safe entry</body></html>
+{"code":200,"message":"success","data":{"key":"value"}}"""
+
+    payload = client._decode_payload(raw, "text/html; charset=utf-8")
+
+    assert payload["json"] == {"code": 200, "message": "success", "data": {"key": "value"}}
+    assert "<!DOCTYPE html>" in payload["text"]

@@ -215,9 +215,10 @@ CLI 发送：
 ```bash
 1panel api discover              # 发现 Swagger 端点
 1panel api discover --match website
-1panel api schema SCHEMA_NAME    # 查看 Swagger 模式定义
-1panel api template METHOD PATH  # 生成请求模板
-1panel api call --method GET --path /websites/list
+1panel api schema list --match website
+1panel api schema show request.WebsiteCreate
+1panel api template POST /websites  # 生成请求模板
+1panel api call GET /websites/list
 ```
 
 所有领域命令都支持 `--raw` 以打印完整 API 响应。
@@ -270,8 +271,8 @@ CLI 故意分为两层。
 示例：
 
 ```bash
-1panel api call --method POST --path /websites/update --body-file payload.json
-1panel api call --method POST --path /websites/update --body-file payload.json --confirm
+1panel api call POST /websites/update --body-file payload.json
+1panel api call POST /websites/update --body-file payload.json --confirm
 ```
 
 ## 开发
